@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Audit;
 using Audit.Audit;
 using DAL;
@@ -66,14 +67,18 @@ namespace WebTest
             manager.SmsService = new SmsService();
            
 
-
-            var user = new ApplicationUser { UserName = "alejandroslabkov@gmail.com", Email = "alejandroslabkov@gmail.com" };
+            var rnd = new Random().Next();
+            var user = new ApplicationUser { UserName = $"alejandroslabkov{rnd}@gmail.com", Email = $"alejandroslabkov{rnd}@gmail.com" };
 
 
            
            var result = manager.CreateAsync(user, "@@asdAsd123");
 
             result.Wait();
+
+            var userToUpdate = manager.Users.First();
+            userToUpdate.Email = userToUpdate.Email + "X";
+            manager.UpdateAsync(userToUpdate).Wait();
 
             var r = result.Result;
 

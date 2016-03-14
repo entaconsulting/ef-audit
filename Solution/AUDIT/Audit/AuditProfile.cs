@@ -8,6 +8,7 @@ namespace Audit.Audit
 {
     public abstract class AuditProfile 
     {
+        private const string DynamicProxyAssemblyName = "System.Data.Entity.DynamicProxies";
         private readonly IDictionary<Type, AuditConfiguration> _auditList;
 //        private readonly IDictionary<Type, AuditConfiguration> _auditAllList;
         private readonly HashSet<Type> _excludeTypeList;
@@ -152,13 +153,18 @@ namespace Audit.Audit
 
         private AuditConfiguration GetConfigurationFromType(Type entityType)
         {
+            //chequeo si el tipo es un proxy de EF en cuyo caso tomo el basetype
+            var internalEntityType = entityType.FullName.StartsWith(DynamicProxyAssemblyName)
+                ? entityType.BaseType
+                : entityType;
+
             AuditConfiguration configuration;
-            if (!_auditList.TryGetValue(entityType, out configuration))
+            if (!_auditList.TryGetValue(internalEntityType, out configuration))
             {
                 //busco alguna configuración genérica para el tipo
                 //me quedo con la más específica de las que hay
                 var genericConfigurations = _auditList
-                    .Where(a => a.Value.Generic &&  a.Key.IsAssignableFrom(entityType) && !_excludeTypeList.Contains(entityType) && !_excludeNsList.Contains(entityType.Namespace))
+                    .Where(a => a.Value.Generic &&  a.Key.IsAssignableFrom(internalEntityType) && !_excludeTypeList.Contains(internalEntityType) && !_excludeNsList.Contains(internalEntityType.Namespace))
                     .ToList();
                 if (genericConfigurations.Any())
                 {

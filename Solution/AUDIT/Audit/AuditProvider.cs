@@ -15,6 +15,7 @@ namespace Audit.Audit
     public class AuditProvider : IAuditProvider
     {
         private readonly DbContext _dbContext;
+        private const string DynamicProxyAssemblyName = "System.Data.Entity.DynamicProxies";
 
         public AuditProvider(DbContext dbContext)
         {
@@ -181,7 +182,12 @@ namespace Audit.Audit
 
         private string GetNameFromType(Type type)
         {
-            return type.Name;
+            //chequeo si el tipo es un proxy de EF en cuyo caso tomo el basetype
+            var internalType = type.FullName.StartsWith(DynamicProxyAssemblyName)
+                ? type.BaseType
+                : type;
+
+            return internalType.Name;
 
         }
         private string GetEntityKey(object entity, LambdaExpression entityKey)

@@ -50,7 +50,20 @@ namespace Audit
 
         private void SaveChanges(IInvocation invocation)
         {
-            var dbContext = (DbContext)invocation.InvocationTarget;
+            //si no tiene parámetros continuo sin hacer nada porque el que realmente ejecuta el savechanges es el overload con 1 parámetro
+            if (invocation.Arguments.Length == 0)
+            {
+                invocation.Proceed();
+                return;
+            }
+
+            var dbContext = invocation.InvocationTarget as DbContext;
+            if (dbContext == null)
+            {
+                invocation.Proceed();
+                return;
+            }
+
 
             dbContext.ChangeTracker.DetectChanges();
 
@@ -82,7 +95,19 @@ namespace Audit
 
         private void SaveChangesAsync(IInvocation invocation)
         {
-            var dbContext = (DbContext)invocation.InvocationTarget;
+            //si no tiene parámetros continuo sin hacer nada porque el que realmente ejecuta el savechanges es el overload con 1 parámetro
+            if (invocation.Arguments.Length == 0)
+            {
+                invocation.Proceed();
+                return;
+            }
+
+            var dbContext = invocation.InvocationTarget as DbContext;
+            if (dbContext == null)
+            {
+                invocation.Proceed();
+                return;
+            }
 
             dbContext.ChangeTracker.DetectChanges();
 
@@ -101,27 +126,22 @@ namespace Audit
             Audit(entries.Where(a => a.State == EntityState.Modified).ToList(), date, EntityState.Modified);
 
             //las altas se loguean después del save para tener los ids
-
             invocation.Proceed();
+            
+            var internalTask = ((Task<int>) invocation.ReturnValue)
+                .ContinueWith(task =>
+                {
+                    Audit(added, date, EntityState.Added);
 
+                    _auditProvider.Write();
 
-            //((Task)invocation.ReturnValue)
-           //.ContinueWith(task =>
-           //{
-               Audit(added, date, EntityState.Added);
+                    //vuelvo a desactivar el autotedect
+                    dbContext.Configuration.AutoDetectChangesEnabled = autoDetectChanges;
 
-               _auditProvider.Write();
+                    return task.Result;
+                });
 
-               //vuelvo a desactivar el autotedect
-               dbContext.Configuration.AutoDetectChangesEnabled = autoDetectChanges;
-           //});
-
-          
-
-
-           
-
-
+            invocation.ReturnValue = internalTask;
 
         }
 

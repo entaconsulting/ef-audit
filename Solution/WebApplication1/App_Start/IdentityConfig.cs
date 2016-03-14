@@ -52,7 +52,6 @@ namespace WebApplication1
 
             var proxyContext = (ApplicationDbContext)new Castle.DynamicProxy.ProxyGenerator().CreateClassProxy(typeof(ApplicationDbContext), new AuditInterceptor(provider, profile, appContext));
 
-
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(proxyContext));
 
             // Configure validation logic for usernames
