@@ -270,6 +270,7 @@ namespace Audit
         public bool Generic { get; set; }
         public LambdaExpression EntityKey { get; set; }
         public String EntityKeyName { get; set; }
+        public string EntityName { get; set; }
         public Func<object, string> CompositeKeyFunc { set; get; }
         public IList<AuditFieldDefinition> AuditFields { get; set; }
         public IList<AuditConfigurationEntry.AuditConfigurationReferenceEntry> AuditReferences { get; set; }

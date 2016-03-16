@@ -129,7 +129,7 @@ namespace Audit.Audit
                 bool fieldsChanged;
                 var auditTrailEntry = new AuditTrail
                 {
-                    Entidad = GetEntityName(entry.Entity),
+                    Entidad = string.IsNullOrEmpty(config.EntityName) ? GetEntityName(entry.Entity) : config.EntityName,
                     ClaveEntidad = GetEntityKey(entry.Entity, config.EntityKey),
                     FechaUpdate = date,
                     Usuario = user,
@@ -198,7 +198,7 @@ namespace Audit.Audit
             return (memberExpression.Member as PropertyInfo).GetValue(entity).ToString();
         }
 
-     
+
         private static string GetXml(DbEntityEntry entry, IEnumerable<AuditFieldDefinition> auditableFields, EntityState stateToBuild, out bool fieldsChanged)
         {
             var xml = new StringBuilder();
@@ -220,7 +220,7 @@ namespace Audit.Audit
                                 ? property.CurrentValue.ToString()
                                 : string.Empty;
 
-                            var dbValue = (dbValues.GetDbPropertyValue(auditableField.FieldName)??String.Empty).ToString();
+                            var dbValue = (dbValues.GetDbPropertyValue(auditableField.FieldName) ?? String.Empty).ToString();
                             if (currentValue != dbValue)
                             {
                                 fieldsChanged = true;

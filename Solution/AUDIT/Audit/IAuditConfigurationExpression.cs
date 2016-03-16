@@ -11,5 +11,6 @@ namespace Audit.Audit
         IAuditHierarchyTableConfigurationExpression<T> AuditRelation<TRel>(Expression<Func<T, IEnumerable<TRel>>> relationCollection, Expression<Func<TRel, int>> fkField, Expression<Func<TRel, object>> auditableField, Expression<Func<TRel, object>> descriptionExpression) where TRel : class;
         IAuditHierarchyTableConfigurationExpression<T> AuditCompositeKey(Func<T, string> func);
         IAuditHierarchyTableConfigurationExpression<T> IgnoreIfNoFieldChanged();
+        IAuditHierarchyTableConfigurationExpression<T> EntityName(string name);
     }
 }

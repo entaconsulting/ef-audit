@@ -148,6 +148,7 @@ namespace Audit.Audit
             entry.AuditableReferences = configuration.AuditReferences;
             entry.CompositeKey = configuration.CompositeKeyFunc;
             entry.IgnoreIfNoFieldChanged = configuration.IgnoreIfNoFieldChanged;
+            entry.EntityName = configuration.EntityName;
             return entry;
         }
 
@@ -184,6 +185,11 @@ namespace Audit.Audit
         public void SetIgnoreIfNoFieldChanged<T>()
         {
             _auditList[typeof (T)].IgnoreIfNoFieldChanged = true;
+        }
+
+        public void EntityName<T>(string name)
+        {
+            _auditList[typeof(T)].EntityName = name;
         }
     }
 }

@@ -20,7 +20,8 @@ namespace WebApplication1
             AddAuditable<ApplicationUser>(e => e.Id)
                 .IgnoreIfNoFieldChanged()
                 .AuditField(e => e.Email)
-                .AuditField(e => e.PasswordHash);
+                .AuditField(e => e.PasswordHash)
+                .EntityName("ApplicationUserTest");
 
 
         }

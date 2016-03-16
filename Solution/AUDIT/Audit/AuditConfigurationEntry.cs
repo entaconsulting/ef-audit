@@ -13,6 +13,7 @@ namespace Audit.Audit
         public IEnumerable<AuditConfigurationReferenceEntry> AuditableReferences { get; set; }
         public Func<object, string> CompositeKey { get; set; }
         public bool IgnoreIfNoFieldChanged { get; set; }
+        public string EntityName { get; set; }
 
         public class AuditConfigurationReferenceEntry
         {

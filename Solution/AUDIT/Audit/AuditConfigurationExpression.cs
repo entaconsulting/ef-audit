@@ -71,5 +71,12 @@ namespace Audit.Audit
             _parent.ExcludeNameSpace(typeof (TExclude).Namespace);
             return this;
         }
+
+        public IAuditHierarchyTableConfigurationExpression<T> EntityName(string name)
+        {
+            _parent.EntityName<T>(name);
+            return this;
+        }
+
     }
 }
