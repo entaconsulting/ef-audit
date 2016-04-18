@@ -119,9 +119,9 @@
       <Project>{6c26c2a5-4120-497a-b397-bdbc1f74e8ad}</Project>
       <Name>Tests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebApplication1\WebApplication1.csproj">
+    <ProjectReference Include="..\WebApplication1\Dal.Sample.WebApp.csproj">
       <Project>{8d676db9-4310-4d31-9207-baac700bd6c4}</Project>
-      <Name>WebApplication1</Name>
+      <Name>Dal.Sample.WebApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

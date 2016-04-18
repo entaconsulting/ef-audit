@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-namespace DAL
+namespace Dal.Sample.Model
 {
     public class Usuario
     {
