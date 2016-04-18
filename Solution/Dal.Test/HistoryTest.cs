@@ -101,5 +101,70 @@ namespace Dal.Test
             Assert.AreEqual(futuro, estadoFuturo.VigenciaDesde);
             Assert.AreEqual(HistoryExtensions.VigenciaMaxima, estadoFuturo.VigenciaHasta);
         }
+
+        [Test]
+        public async Task ObtenerVersionInexistente()
+        {
+            var hoy = DateTime.Today;
+            var usuario = await GenerarUsuarioConHistoria(hoy);
+
+            var ayer = hoy.AddDays(-1);
+            var estadoAyer = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(ayer, _uow);
+
+            Assert.Null(estadoAyer);
+
+        }
+
+        [Test]
+        public async Task ObtenerVersionInicial()
+        {
+            var hoy = DateTime.Today;
+            var usuario = await GenerarUsuarioConHistoria(hoy);
+
+            var estadoHoy = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(hoy, _uow);
+
+            Assert.AreEqual(hoy, estadoHoy.VigenciaDesde);
+
+        }
+
+        [Test]
+        public async Task ObtenerVersionIntermedia()
+        {
+            var hoy = DateTime.Today;
+            var usuario = await GenerarUsuarioConHistoria(hoy);
+
+            //inicia 15 días después de hoy, pido 20 días pero me tiene que venir la versión que inicia en 15
+            var vigenciaIntermedia = hoy.AddDays(20);
+            var estado = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(vigenciaIntermedia, _uow);
+
+            Assert.AreEqual(hoy.AddDays(15), estado.VigenciaDesde);
+
+        }
+
+        private async Task<Usuario> GenerarUsuarioConHistoria(DateTime hoy)
+        {
+            var usuario = _fixture.Create<Usuario>();
+            _rUsuarios.Add(usuario);
+            _uow.SaveChanges();
+
+            var estadoHoy = usuario.GenerarVersion(u => u.Estados, hoy, _uow);
+            estadoHoy.Habilitado = true;
+            await _uow.SaveChangesAsync();
+
+            var futuro = hoy.AddMonths(1);
+            var estadoFuturo = usuario.GenerarVersion(u => u.Estados, futuro, _uow);
+            estadoFuturo.Habilitado = true;
+            await _uow.SaveChangesAsync();
+
+            var entreHoyYFuturo = hoy.AddDays(15);
+            var estadoIntermedio = usuario.GenerarVersion(u => u.Estados, entreHoyYFuturo, _uow);
+            estadoIntermedio.Habilitado = false;
+            await _uow.SaveChangesAsync();
+
+            return usuario;
+
+        }
+
     }
+
 }
