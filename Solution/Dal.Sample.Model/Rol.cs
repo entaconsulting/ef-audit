@@ -1,8 +1,9 @@
-﻿namespace Dal.Sample.Model
+﻿using Dal.Base;
+
+namespace Dal.Sample.Model
 {
-    public class Rol
+    public class Rol:EntityBase
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
     }
 }

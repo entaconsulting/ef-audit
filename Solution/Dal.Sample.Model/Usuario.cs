@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using Dal.Base;
 
 namespace Dal.Sample.Model
 {
-    public class Usuario
+    public class Usuario:EntityBase
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public bool Habilitado { get; set; }
-
         public int PaisId { get; set; }
         public Pais Pais { get; set; }
-
+        public ICollection<UsuarioEstadoHistory> Estados { get; set; }
     }
 }

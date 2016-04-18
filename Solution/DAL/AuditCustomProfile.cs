@@ -1,4 +1,5 @@
 ﻿using Audit.Audit;
+using Dal.Sample.Model;
 
 namespace DAL
 {
@@ -12,7 +13,6 @@ namespace DAL
                 .IgnoreIfNoFieldChanged()
                 .AuditField(e => e.Nombre)
                 .AuditField(e => e.Apellido)
-                .AuditField(e => e.Habilitado)
                 .AuditField(e => e.FechaNacimiento);
 
             

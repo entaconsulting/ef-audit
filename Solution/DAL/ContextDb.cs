@@ -7,17 +7,17 @@ using Dal.Sample.Model;
 namespace DAL
 {
 
-    public class ContextDb : DbContext
+    public class SampleDbContext : DbContext
     {
         /// <summary>
         /// Constructor con lazy loading deshabilitado por default
         /// </summary>
-        public ContextDb(string nameOrConnectionString) : base(nameOrConnectionString)
+        public SampleDbContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
 
         }
 
-        public ContextDb() : base()
+        public SampleDbContext() : base()
         {
 
         }
