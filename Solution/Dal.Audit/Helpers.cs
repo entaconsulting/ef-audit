@@ -4,7 +4,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public static class Helpers
     {

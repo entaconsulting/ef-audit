@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public interface IAuditManager
     {

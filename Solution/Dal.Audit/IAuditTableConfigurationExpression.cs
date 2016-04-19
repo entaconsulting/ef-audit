@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-
-namespace Audit.Audit
+﻿namespace Dal.Audit
 {
     public interface IAuditHierarchyConfigurationExpression<T> : IAuditHierarchyTableConfigurationExpression<T>
     {

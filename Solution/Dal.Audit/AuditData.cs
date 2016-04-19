@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public class AuditData
     {

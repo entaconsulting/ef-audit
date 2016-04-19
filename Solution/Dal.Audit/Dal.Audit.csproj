@@ -69,25 +69,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditConfigurationEntry.cs" />
+    <Compile Include="AuditConfigurationExpression.cs" />
+    <Compile Include="AuditData.cs" />
+    <Compile Include="AuditDataDetail.cs" />
+    <Compile Include="AuditExtension.cs" />
+    <Compile Include="AuditFieldDefinition.cs" />
     <Compile Include="AuditManager.cs" />
     <Compile Include="AuditEfProxy.cs" />
-    <Compile Include="Audit\AuditConfigurationEntry.cs" />
-    <Compile Include="Audit\AuditConfigurationExpression.cs" />
-    <Compile Include="Audit\AuditData.cs" />
-    <Compile Include="Audit\AuditDataDetail.cs" />
-    <Compile Include="Audit\AuditExtension.cs" />
-    <Compile Include="Audit\AuditFieldDefinition.cs" />
-    <Compile Include="Audit\AuditProfile.cs" />
-    <Compile Include="Audit\AuditProvider.cs" />
-    <Compile Include="Audit\AuditTrail.cs" />
-    <Compile Include="Audit\AuditTrailTypeConfiguration.cs" />
-    <Compile Include="Audit\Helpers.cs" />
-    <Compile Include="Audit\IAppContext.cs" />
-    <Compile Include="Audit\IAuditTableConfigurationExpression.cs" />
-    <Compile Include="Audit\IAuditConfigurationExpression.cs" />
-    <Compile Include="Audit\IAuditManager.cs" />
-    <Compile Include="Audit\IAuditProvider.cs" />
-    <Compile Include="Audit\LoggingProxy.cs" />
+    <Compile Include="AuditProfile.cs" />
+    <Compile Include="AuditProvider.cs" />
+    <Compile Include="AuditTrail.cs" />
+    <Compile Include="AuditTrailTypeConfiguration.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="IAppContext.cs" />
+    <Compile Include="IAuditConfigurationExpression.cs" />
+    <Compile Include="IAuditManager.cs" />
+    <Compile Include="IAuditProvider.cs" />
+    <Compile Include="IAuditTableConfigurationExpression.cs" />
+    <Compile Include="LoggingProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public interface IAuditProvider
     {

@@ -1,4 +1,4 @@
-﻿using Audit.Audit;
+﻿using Dal.Audit;
 using Dal.Base;
 using Dal.Sample.Model;
 

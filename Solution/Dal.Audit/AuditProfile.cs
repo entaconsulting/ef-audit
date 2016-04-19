@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Net;
+using Audit;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public abstract class AuditProfile 
     {

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
-
-namespace Audit.Audit
+﻿namespace Dal.Audit
 {
     public class AuditFieldDefinition
     {

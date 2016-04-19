@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public class AuditHierarchyConfigurationExpression<T> : IAuditHierarchyTableConfigurationExpression<T>, IAuditHierarchyConfigurationExpression<T> where T : class
     {

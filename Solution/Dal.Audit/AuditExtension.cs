@@ -1,8 +1,7 @@
 ﻿using System.Data.Entity;
 using Audit;
-using Audit.Audit;
 
-namespace Dal.Audit.Audit
+namespace Dal.Audit
 {
     public static class AuditExtension
     {

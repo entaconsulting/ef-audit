@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public class AuditTrail
     {

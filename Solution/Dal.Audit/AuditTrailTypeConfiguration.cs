@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace Audit.Audit
+namespace Dal.Audit
 {
     public class AuditTrailTypeConfiguration:EntityTypeConfiguration<AuditTrail>
     {

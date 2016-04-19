@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
-using Audit.Audit;
+using Dal.Audit;
 using Dal.Sample.Model;
 
 

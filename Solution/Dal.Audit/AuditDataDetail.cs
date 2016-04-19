@@ -1,4 +1,4 @@
-﻿namespace Audit.Audit
+﻿namespace Dal.Audit
 {
     public class AuditDataDetail:AuditData
     {
