@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="8b626adf-365c-4a69-96de-1039afcee144" Title="Dal.Audit Namespace" Url="html/1004395399.htm">
+    <HelpTOCNode Id="c6c0e257-bed0-431a-b392-522ba9fd3175" Title="AuditConfiguration Class" Url="html/1312320846.htm">
+      <HelpTOCNode Title="AuditConfiguration Members" Url="html/141712561.htm" />
+      <HelpTOCNode Title="AuditConfiguration Methods" Url="html/1833857309.htm" />
+      <HelpTOCNode Id="91656141-f579-4e9f-826a-1d015fefc6e9" Title="AuditConfiguration Properties" Url="html/1636972375.htm">
+        <HelpTOCNode Title="AuditFields Property " Url="html/1071649486.htm" />
+        <HelpTOCNode Title="AuditReferences Property " Url="html/1805522303.htm" />
+        <HelpTOCNode Title="CompositeKeyFunc Property " Url="html/2021612017.htm" />
+        <HelpTOCNode Title="EntityKey Property " Url="html/1110940576.htm" />
+        <HelpTOCNode Title="EntityKeyName Property " Url="html/1148901265.htm" />
+        <HelpTOCNode Title="EntityName Property " Url="html/539524956.htm" />
+        <HelpTOCNode Title="Generic Property " Url="html/1667011514.htm" />
+        <HelpTOCNode Title="IgnoreIfNoFieldChanged Property " Url="html/2097548062.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4cf6eedc-a380-40b3-8de2-c50d56270c6e" Title="AuditConfigurationEntry Class" Url="html/2027450226.htm">
+      <HelpTOCNode Title="AuditConfigurationEntry Members" Url="html/342823224.htm" />
+      <HelpTOCNode Title="AuditConfigurationEntry Methods" Url="html/292500889.htm" />
+      <HelpTOCNode Id="d3a68cef-1bf1-48d8-877a-96144b956d8d" Title="AuditConfigurationEntry Properties" Url="html/1590442935.htm">
+        <HelpTOCNode Title="AuditableFields Property " Url="html/1451411937.htm" />
+        <HelpTOCNode Title="AuditableReferences Property " Url="html/1149784493.htm" />
+        <HelpTOCNode Title="CompositeKey Property " Url="html/229973318.htm" />
+        <HelpTOCNode Title="EntityKey Property " Url="html/2115109245.htm" />
+        <HelpTOCNode Title="EntityKeyPropertyName Property " Url="html/644590983.htm" />
+        <HelpTOCNode Title="EntityName Property " Url="html/661632904.htm" />
+        <HelpTOCNode Title="IgnoreIfNoFieldChanged Property " Url="html/1407098241.htm" />
+        <HelpTOCNode Title="IsAuditable Property " Url="html/46359971.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="23a774dd-bdfa-40aa-8bb0-a020e69b4855" Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Class" Url="html/2133500636.htm">
+      <HelpTOCNode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Members" Url="html/145918986.htm" />
+      <HelpTOCNode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Methods" Url="html/1168662331.htm" />
+      <HelpTOCNode Id="ed2ed912-7e2b-44c0-a94d-e353da56546f" Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Properties" Url="html/868792517.htm">
+        <HelpTOCNode Title="AuditablePropertyName Property " Url="html/1098423484.htm" />
+        <HelpTOCNode Title="DescriptionPropertyName Property " Url="html/293849646.htm" />
+        <HelpTOCNode Title="DescriptionPropertyType Property " Url="html/1764252395.htm" />
+        <HelpTOCNode Title="ReferenceCollectionName Property " Url="html/609967540.htm" />
+        <HelpTOCNode Title="ReferencePropertyName Property " Url="html/1855284856.htm" />
+        <HelpTOCNode Title="ReferenceType Property " Url="html/704584081.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6df13511-5403-4868-8794-e1b22548f744" Title="AuditData Class" Url="html/1232744772.htm">
+      <HelpTOCNode Title="AuditData Members" Url="html/1668804811.htm" />
+      <HelpTOCNode Title="AuditData Methods" Url="html/365653841.htm" />
+      <HelpTOCNode Id="aefabfb2-e430-4e11-8e93-d855178d0a19" Title="AuditData Properties" Url="html/1131534839.htm">
+        <HelpTOCNode Title="ChangeDate Property " Url="html/736060165.htm" />
+        <HelpTOCNode Title="UserName Property " Url="html/1407739003.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e10592cd-56c2-4c9c-8eec-7cbe134764d1" Title="AuditDataDetail Class" Url="html/1828205648.htm">
+      <HelpTOCNode Title="AuditDataDetail Members" Url="html/541982391.htm" />
+      <HelpTOCNode Title="AuditDataDetail Methods" Url="html/926262850.htm" />
+      <HelpTOCNode Id="78d77ba3-e7b0-45d0-b61b-eef4d79d90ff" Title="AuditDataDetail Properties" Url="html/1094852671.htm">
+        <HelpTOCNode Title="Action Property " Url="html/1936471137.htm" />
+        <HelpTOCNode Title="FieldDescription Property " Url="html/914641338.htm" />
+        <HelpTOCNode Title="FieldName Property " Url="html/1190662417.htm" />
+        <HelpTOCNode Title="NewValue Property " Url="html/1418106329.htm" />
+        <HelpTOCNode Title="ValueDescription Property " Url="html/834905565.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b5f59a91-e8c8-41ff-9a07-039cd9bbd9f0" Title="AuditDataDetailRelation Class" Url="html/298205797.htm">
+      <HelpTOCNode Title="AuditDataDetailRelation Members" Url="html/330788651.htm" />
+      <HelpTOCNode Title="AuditDataDetailRelation Methods" Url="html/481268381.htm" />
+      <HelpTOCNode Id="cc9d8ed7-6adc-4a22-9a4a-795c6107b343" Title="AuditDataDetailRelation Properties" Url="html/1786245182.htm">
+        <HelpTOCNode Title="Action Property " Url="html/1342268427.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="22bdebf7-9fee-4dc8-b28f-a7d690e5c7ea" Title="AuditExtension Class" Url="html/2075727343.htm">
+      <HelpTOCNode Title="AuditExtension Members" Url="html/483344365.htm" />
+      <HelpTOCNode Id="64bbd2c5-8132-41e7-b26e-dc1568a45df0" Title="AuditExtension Methods" Url="html/667383591.htm">
+        <HelpTOCNode Title="BeginAudit(T) Method " Url="html/909434453.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ccdcfd45-b2d7-4a4a-a15a-5379f2e72e88" Title="AuditFieldDefinition Class" Url="html/716804712.htm">
+      <HelpTOCNode Title="AuditFieldDefinition Members" Url="html/1957381574.htm" />
+      <HelpTOCNode Title="AuditFieldDefinition Methods" Url="html/988848034.htm" />
+      <HelpTOCNode Id="9914729c-c745-4d30-b843-8d0c4eccb512" Title="AuditFieldDefinition Properties" Url="html/744416212.htm">
+        <HelpTOCNode Title="FieldDescription Property " Url="html/1952574029.htm" />
+        <HelpTOCNode Title="FieldName Property " Url="html/1314837325.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="45503ecd-cb92-4c78-aed2-ecfc04058fd2" Title="AuditHierarchyConfigurationExpression(T) Class" Url="html/430408745.htm">
+      <HelpTOCNode Title="AuditHierarchyConfigurationExpression(T) Members" Url="html/1644149230.htm" />
+      <HelpTOCNode Title="AuditHierarchyConfigurationExpression(T) Constructor " Url="html/51940733.htm" />
+      <HelpTOCNode Id="01bec9d5-abd4-4259-a701-06d06053e473" Title="AuditHierarchyConfigurationExpression(T) Methods" Url="html/196071363.htm">
+        <HelpTOCNode Title="AuditCompositeKey Method " Url="html/1561070208.htm" />
+        <HelpTOCNode Id="6982da70-2e89-4214-84f5-a5a5f2b62537" Title="AuditField Method " Url="html/807506250.htm">
+          <HelpTOCNode Title="AuditField Method (Expression(Func(T, Object)))" Url="html/254666088.htm" />
+          <HelpTOCNode Title="AuditField Method (Expression(Func(T, Object)), String, Dictionary(String, String))" Url="html/87881486.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="AuditRelation(TRel) Method " Url="html/835600479.htm" />
+        <HelpTOCNode Title="EntityName Method " Url="html/53857139.htm" />
+        <HelpTOCNode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/1293168447.htm" />
+        <HelpTOCNode Title="ExcludeTable(TExclude) Method " Url="html/796562779.htm" />
+        <HelpTOCNode Title="IgnoreIfNoFieldChanged Method " Url="html/18045848.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c9cad155-120b-490d-a594-d39dbb782149" Title="AuditInterceptor Class" Url="html/1406259637.htm">
+      <HelpTOCNode Title="AuditInterceptor Members" Url="html/1071674593.htm" />
+      <HelpTOCNode Title="AuditInterceptor Constructor " Url="html/281265828.htm" />
+      <HelpTOCNode Id="9aad40f0-917d-4afd-b52b-ada1e066bf55" Title="AuditInterceptor Methods" Url="html/1513543105.htm">
+        <HelpTOCNode Title="Intercept Method " Url="html/276163028.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1fe4beaa-1153-433c-b9f0-1ecbb7e0809c" Title="AuditManager Class" Url="html/2067190500.htm">
+      <HelpTOCNode Title="AuditManager Members" Url="html/2133723664.htm" />
+      <HelpTOCNode Title="AuditManager Constructor " Url="html/1310591616.htm" />
+      <HelpTOCNode Id="58eb1084-7388-47d4-a04c-522579a07d11" Title="AuditManager Methods" Url="html/1958298779.htm">
+        <HelpTOCNode Title="Commit Method " Url="html/731126233.htm" />
+        <HelpTOCNode Title="CommitAsync Method " Url="html/766536263.htm" />
+        <HelpTOCNode Id="400afca1-4218-482b-8d4b-a8abe890c320" Title="GetFieldHistory Method " Url="html/671312279.htm">
+          <HelpTOCNode Title="GetFieldHistory(T) Method (T, Expression(Func(T, Object))[])" Url="html/1216313843.htm" />
+          <HelpTOCNode Title="GetFieldHistory(T) Method (String, Expression(Func(T, Object))[])" Url="html/839661646.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/2131936857.htm" />
+        <HelpTOCNode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1471952934.htm" />
+        <HelpTOCNode Id="651a35a3-7c61-4aaa-9b41-a40a339626a7" Title="GetLastUpdate Method " Url="html/826078214.htm">
+          <HelpTOCNode Title="GetLastUpdate(T) Method (T)" Url="html/430795780.htm" />
+          <HelpTOCNode Title="GetLastUpdate(T) Method (T, Expression(Func(T, Object))[])" Url="html/165327868.htm" />
+          <HelpTOCNode Title="GetLastUpdate Method (String, String)" Url="html/141452043.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetLastUpdateByCompositeKey Method " Url="html/2005533616.htm" />
+        <HelpTOCNode Title="WriteAuditAdded Method " Url="html/1502046484.htm" />
+        <HelpTOCNode Title="WriteAuditDeleted Method " Url="html/1000445908.htm" />
+        <HelpTOCNode Title="WriteAuditModified Method " Url="html/1917764075.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="608a26bf-53c9-4499-b872-757029cdc0bf" Title="AuditProfile Class" Url="html/429246115.htm">
+      <HelpTOCNode Title="AuditProfile Members" Url="html/811601805.htm" />
+      <HelpTOCNode Id="4132a77b-9edd-4d42-8534-203b4c2ac097" Title="AuditProfile Methods" Url="html/626120132.htm">
+        <HelpTOCNode Title="AddCompositeKey(T) Method " Url="html/1037140658.htm" />
+        <HelpTOCNode Title="Configure Method " Url="html/553626497.htm" />
+        <HelpTOCNode Title="EntityName(T) Method " Url="html/266022758.htm" />
+        <HelpTOCNode Title="Exclude Method " Url="html/829755077.htm" />
+        <HelpTOCNode Title="ExcludeNameSpace Method " Url="html/968894736.htm" />
+        <HelpTOCNode Title="GetConfiguration Method " Url="html/1945696227.htm" />
+        <HelpTOCNode Title="SetIgnoreIfNoFieldChanged(T) Method " Url="html/1202806752.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b171fd39-4b96-4e79-8a5b-ff0f3101b6df" Title="AuditProvider Class" Url="html/156637976.htm">
+      <HelpTOCNode Title="AuditProvider Members" Url="html/1450315661.htm" />
+      <HelpTOCNode Title="AuditProvider Constructor " Url="html/1438908268.htm" />
+      <HelpTOCNode Id="c139f6a3-cd0a-4de8-9ce8-30606455a2ac" Title="AuditProvider Methods" Url="html/1296768474.htm">
+        <HelpTOCNode Title="AddAudit Method " Url="html/1880092781.htm" />
+        <HelpTOCNode Id="3c181d66-fc94-4225-80c0-be1902f83f96" Title="Overload:Dal.Audit.AuditProvider.GetAuditTrail">
+          <HelpTOCNode Title="GetAuditTrail(T) Method (T, AuditConfigurationEntry, Expression(Func(T, Object))[])" Url="html/47003528.htm" />
+          <HelpTOCNode Title="GetAuditTrail Method (String, String, String[])" Url="html/551476686.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetAuditTrailByCompositeKey Method " Url="html/930339200.htm" />
+        <HelpTOCNode Title="GetAuditTrailByCompositeKeyRelation Method " Url="html/1094785779.htm" />
+        <HelpTOCNode Title="Write Method " Url="html/1250210092.htm" />
+        <HelpTOCNode Title="WriteAsync Method " Url="html/2019207776.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5109af04-03f2-486f-91f3-a32040199717" Title="AuditTrail Class" Url="html/1852102861.htm">
+      <HelpTOCNode Title="AuditTrail Members" Url="html/1283975208.htm" />
+      <HelpTOCNode Title="AuditTrail Methods" Url="html/1549291266.htm" />
+      <HelpTOCNode Id="e6ab74cd-24d3-4ab0-ad88-2ad0065b559b" Title="AuditTrail Properties" Url="html/1494192537.htm">
+        <HelpTOCNode Title="Action Property " Url="html/63739725.htm" />
+        <HelpTOCNode Title="ClaveEntidad Property " Url="html/51584400.htm" />
+        <HelpTOCNode Title="CompositeKey Property " Url="html/732625794.htm" />
+        <HelpTOCNode Title="Datos Property " Url="html/1789133040.htm" />
+        <HelpTOCNode Title="Entidad Property " Url="html/768501847.htm" />
+        <HelpTOCNode Title="FechaUpdate Property " Url="html/91550548.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/1671991785.htm" />
+        <HelpTOCNode Title="Usuario Property " Url="html/822734946.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="de27eef3-090a-43d2-a642-9e34201aeb42" Title="AuditTrailTypeConfiguration Class" Url="html/237184548.htm">
+      <HelpTOCNode Title="AuditTrailTypeConfiguration Members" Url="html/1617681341.htm" />
+      <HelpTOCNode Title="AuditTrailTypeConfiguration Constructor " Url="html/2007696591.htm" />
+      <HelpTOCNode Title="AuditTrailTypeConfiguration Methods" Url="html/394540203.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1461765b-e28b-4191-a730-bbe745b7b943" Title="Helpers Class" Url="html/793936388.htm">
+      <HelpTOCNode Title="Helpers Members" Url="html/755059361.htm" />
+      <HelpTOCNode Id="6c21cea5-8e4e-44ad-83c5-23680fc17641" Title="Helpers Methods" Url="html/697959160.htm">
+        <HelpTOCNode Title="GetDbPropertyValue Method " Url="html/1106778818.htm" />
+        <HelpTOCNode Title="GetFullPropertyName(T, TProperty) Method " Url="html/1110787279.htm" />
+        <HelpTOCNode Title="GetMemberExpression Method " Url="html/2103987926.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7e9919e5-7038-4306-86e3-bb4c3d25740b" Title="IAppContext Interface" Url="html/5713069.htm">
+      <HelpTOCNode Title="IAppContext Members" Url="html/483372122.htm" />
+      <HelpTOCNode Title="IAppContext Methods" Url="html/1926499865.htm" />
+      <HelpTOCNode Id="0b483152-e328-4f1a-816a-150abd9f3761" Title="IAppContext Properties" Url="html/1718969904.htm">
+        <HelpTOCNode Title="UserName Property " Url="html/337838569.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0b202aaa-2eda-4c13-9285-e3eb4fefab8e" Title="IAuditHierarchyConfigurationExpression(T) Interface" Url="html/556239832.htm">
+      <HelpTOCNode Title="IAuditHierarchyConfigurationExpression Members" Url="html/1045004426.htm" />
+      <HelpTOCNode Id="2542ec81-8584-4579-944a-35ff7e8f4763" Title="IAuditHierarchyConfigurationExpression Methods" Url="html/844643917.htm">
+        <HelpTOCNode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/631246204.htm" />
+        <HelpTOCNode Title="ExcludeTable(TExclude) Method " Url="html/1981078350.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4b25c457-597c-4e7c-9fb5-32ad488baea2" Title="IAuditHierarchyTableConfigurationExpression(T) Interface" Url="html/1761843977.htm">
+      <HelpTOCNode Title="IAuditHierarchyTableConfigurationExpression Members" Url="html/952218259.htm" />
+      <HelpTOCNode Id="94f50814-e599-4ad4-8bb7-1b7ac8ef37e5" Title="IAuditHierarchyTableConfigurationExpression Methods" Url="html/1466357753.htm">
+        <HelpTOCNode Title="AuditCompositeKey Method " Url="html/2001451671.htm" />
+        <HelpTOCNode Title="AuditField Method " Url="html/1292091954.htm" />
+        <HelpTOCNode Title="AuditRelation(TRel) Method " Url="html/1963073790.htm" />
+        <HelpTOCNode Title="EntityName Method " Url="html/150323930.htm" />
+        <HelpTOCNode Title="IgnoreIfNoFieldChanged Method " Url="html/1246779319.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ce70e295-f2d3-4d62-b098-30b56142ed2c" Title="IAuditManager Interface" Url="html/149519689.htm">
+      <HelpTOCNode Title="IAuditManager Members" Url="html/1381391147.htm" />
+      <HelpTOCNode Id="206dd719-a5d8-493e-aa4e-94dfb6947398" Title="IAuditManager Methods" Url="html/1282977558.htm">
+        <HelpTOCNode Title="Commit Method " Url="html/1444332468.htm" />
+        <HelpTOCNode Title="CommitAsync Method " Url="html/1200330753.htm" />
+        <HelpTOCNode Id="0635c0d1-37c5-4eb3-859d-5f451b802837" Title="GetFieldHistory Method " Url="html/1802946080.htm">
+          <HelpTOCNode Title="GetFieldHistory(T) Method (T, Expression(Func(T, Object))[])" Url="html/844186773.htm" />
+          <HelpTOCNode Title="GetFieldHistory(T) Method (String, Expression(Func(T, Object))[])" Url="html/1601941780.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/1816652974.htm" />
+        <HelpTOCNode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1410070859.htm" />
+        <HelpTOCNode Id="283514ca-adf7-4701-914e-22406aeb852e" Title="GetLastUpdate Method " Url="html/1701972998.htm">
+          <HelpTOCNode Title="GetLastUpdate(T) Method (T)" Url="html/643976101.htm" />
+          <HelpTOCNode Title="GetLastUpdate(T) Method (T, Expression(Func(T, Object))[])" Url="html/1343879452.htm" />
+          <HelpTOCNode Title="GetLastUpdate Method (String, String)" Url="html/354389726.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetLastUpdateByCompositeKey Method " Url="html/427381765.htm" />
+        <HelpTOCNode Title="WriteAuditAdded Method " Url="html/84432100.htm" />
+        <HelpTOCNode Title="WriteAuditDeleted Method " Url="html/741245264.htm" />
+        <HelpTOCNode Title="WriteAuditModified Method " Url="html/860972970.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="966f7730-03ce-4e70-bf13-a7a1c30df925" Title="IAuditProvider Interface" Url="html/2045392226.htm">
+      <HelpTOCNode Title="IAuditProvider Members" Url="html/1156019707.htm" />
+      <HelpTOCNode Id="c150af7a-0926-4258-a15f-cf501fd2cdaa" Title="IAuditProvider Methods" Url="html/359174997.htm">
+        <HelpTOCNode Title="AddAudit Method " Url="html/1738800570.htm" />
+        <HelpTOCNode Id="c4321fae-d3f3-4d0c-9b1a-3aadba275f21" Title="Overload:Dal.Audit.IAuditProvider.GetAuditTrail">
+          <HelpTOCNode Title="GetAuditTrail(T) Method (T, AuditConfigurationEntry, Expression(Func(T, Object))[])" Url="html/519648594.htm" />
+          <HelpTOCNode Title="GetAuditTrail Method (String, String, String[])" Url="html/336506553.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetAuditTrailByCompositeKey Method " Url="html/1768159433.htm" />
+        <HelpTOCNode Title="GetAuditTrailByCompositeKeyRelation Method " Url="html/490230918.htm" />
+        <HelpTOCNode Title="Write Method " Url="html/432576510.htm" />
+        <HelpTOCNode Title="WriteAsync Method " Url="html/1150769181.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="140c93a2-1255-4b1a-8d2e-c9af3888bd67" Title="LoggingProxy(T) Class" Url="html/1754832039.htm">
+      <HelpTOCNode Title="LoggingProxy(T) Members" Url="html/796040383.htm" />
+      <HelpTOCNode Id="1fe31f0e-1b75-413d-923d-460494eca932" Title="LoggingProxy(T) Methods" Url="html/1941569486.htm">
+        <HelpTOCNode Title="Create Method " Url="html/1742666311.htm" />
+        <HelpTOCNode Id="d135fb94-6672-48e1-bd84-2e72d7407792" Title="Invoke Method " Url="html/1856133105.htm">
+          <HelpTOCNode Title="Invoke Method " Url="html/1767000367.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

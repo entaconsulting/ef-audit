@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Action property">
+    <HelpKINode Title="Action Property " Url="html/1936471137.htm" />
+    <HelpKINode Title="Action Property " Url="html/1342268427.htm" />
+    <HelpKINode Title="Action Property " Url="html/63739725.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddAudit method">
+    <HelpKINode Title="AddAudit Method " Url="html/1738800570.htm" />
+    <HelpKINode Title="AddAudit Method " Url="html/1880092781.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddCompositeKey(Of T) method" Url="html/1037140658.htm" />
+  <HelpKINode Title="AddCompositeKey&lt;T&gt; method" Url="html/1037140658.htm" />
+  <HelpKINode Title="AuditableFields property" Url="html/1451411937.htm" />
+  <HelpKINode Title="AuditablePropertyName property" Url="html/1098423484.htm" />
+  <HelpKINode Title="AuditableReferences property" Url="html/1149784493.htm" />
+  <HelpKINode Title="AuditCompositeKey method">
+    <HelpKINode Title="AuditCompositeKey Method " Url="html/1561070208.htm" />
+    <HelpKINode Title="AuditCompositeKey Method " Url="html/2001451671.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditConfiguration class">
+    <HelpKINode Title="AuditConfiguration Class" Url="html/1312320846.htm" />
+    <HelpKINode Title="AuditConfiguration Members" Url="html/141712561.htm" />
+    <HelpKINode Title="about AuditConfiguration class" Url="html/1312320846.htm" />
+    <HelpKINode Title="all members" Url="html/141712561.htm" />
+    <HelpKINode Title="methods" Url="html/1833857309.htm" />
+    <HelpKINode Title="properties" Url="html/1636972375.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditConfiguration.AuditFields property" Url="html/1071649486.htm" />
+  <HelpKINode Title="AuditConfiguration.AuditReferences property" Url="html/1805522303.htm" />
+  <HelpKINode Title="AuditConfiguration.CompositeKeyFunc property" Url="html/2021612017.htm" />
+  <HelpKINode Title="AuditConfiguration.EntityKey property" Url="html/1110940576.htm" />
+  <HelpKINode Title="AuditConfiguration.EntityKeyName property" Url="html/1148901265.htm" />
+  <HelpKINode Title="AuditConfiguration.EntityName property" Url="html/539524956.htm" />
+  <HelpKINode Title="AuditConfiguration.Generic property" Url="html/1667011514.htm" />
+  <HelpKINode Title="AuditConfiguration.IgnoreIfNoFieldChanged property" Url="html/2097548062.htm" />
+  <HelpKINode Title="AuditConfigurationEntry class">
+    <HelpKINode Title="AuditConfigurationEntry Class" Url="html/2027450226.htm" />
+    <HelpKINode Title="AuditConfigurationEntry Members" Url="html/342823224.htm" />
+    <HelpKINode Title="about AuditConfigurationEntry class" Url="html/2027450226.htm" />
+    <HelpKINode Title="all members" Url="html/342823224.htm" />
+    <HelpKINode Title="methods" Url="html/292500889.htm" />
+    <HelpKINode Title="properties" Url="html/1590442935.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditConfigurationEntry.AuditableFields property" Url="html/1451411937.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.AuditableReferences property" Url="html/1149784493.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry class">
+    <HelpKINode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Class" Url="html/2133500636.htm" />
+    <HelpKINode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Members" Url="html/145918986.htm" />
+    <HelpKINode Title="about AuditConfigurationEntry.AuditConfigurationReferenceEntry class" Url="html/2133500636.htm" />
+    <HelpKINode Title="all members" Url="html/145918986.htm" />
+    <HelpKINode Title="methods" Url="html/1168662331.htm" />
+    <HelpKINode Title="properties" Url="html/868792517.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditConfigurationEntry.CompositeKey property" Url="html/229973318.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.EntityKey property" Url="html/2115109245.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.EntityKeyPropertyName property" Url="html/644590983.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.EntityName property" Url="html/661632904.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.IgnoreIfNoFieldChanged property" Url="html/1407098241.htm" />
+  <HelpKINode Title="AuditConfigurationEntry.IsAuditable property" Url="html/46359971.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.AuditablePropertyName property" Url="html/1098423484.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.DescriptionPropertyName property" Url="html/293849646.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.DescriptionPropertyType property" Url="html/1764252395.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.ReferenceCollectionName property" Url="html/609967540.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.ReferencePropertyName property" Url="html/1855284856.htm" />
+  <HelpKINode Title="AuditConfigurationReferenceEntry.ReferenceType property" Url="html/704584081.htm" />
+  <HelpKINode Title="AuditData class">
+    <HelpKINode Title="AuditData Class" Url="html/1232744772.htm" />
+    <HelpKINode Title="AuditData Members" Url="html/1668804811.htm" />
+    <HelpKINode Title="about AuditData class" Url="html/1232744772.htm" />
+    <HelpKINode Title="all members" Url="html/1668804811.htm" />
+    <HelpKINode Title="methods" Url="html/365653841.htm" />
+    <HelpKINode Title="properties" Url="html/1131534839.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditData.ChangeDate property" Url="html/736060165.htm" />
+  <HelpKINode Title="AuditData.UserName property" Url="html/1407739003.htm" />
+  <HelpKINode Title="AuditDataDetail class">
+    <HelpKINode Title="AuditDataDetail Class" Url="html/1828205648.htm" />
+    <HelpKINode Title="AuditDataDetail Members" Url="html/541982391.htm" />
+    <HelpKINode Title="about AuditDataDetail class" Url="html/1828205648.htm" />
+    <HelpKINode Title="all members" Url="html/541982391.htm" />
+    <HelpKINode Title="methods" Url="html/926262850.htm" />
+    <HelpKINode Title="properties" Url="html/1094852671.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditDataDetail.Action property" Url="html/1936471137.htm" />
+  <HelpKINode Title="AuditDataDetail.FieldDescription property" Url="html/914641338.htm" />
+  <HelpKINode Title="AuditDataDetail.FieldName property" Url="html/1190662417.htm" />
+  <HelpKINode Title="AuditDataDetail.NewValue property" Url="html/1418106329.htm" />
+  <HelpKINode Title="AuditDataDetail.ValueDescription property" Url="html/834905565.htm" />
+  <HelpKINode Title="AuditDataDetailRelation class">
+    <HelpKINode Title="AuditDataDetailRelation Class" Url="html/298205797.htm" />
+    <HelpKINode Title="AuditDataDetailRelation Members" Url="html/330788651.htm" />
+    <HelpKINode Title="about AuditDataDetailRelation class" Url="html/298205797.htm" />
+    <HelpKINode Title="all members" Url="html/330788651.htm" />
+    <HelpKINode Title="methods" Url="html/481268381.htm" />
+    <HelpKINode Title="properties" Url="html/1786245182.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditDataDetailRelation.Action property" Url="html/1342268427.htm" />
+  <HelpKINode Title="AuditExtension class">
+    <HelpKINode Title="AuditExtension Class" Url="html/2075727343.htm" />
+    <HelpKINode Title="AuditExtension Members" Url="html/483344365.htm" />
+    <HelpKINode Title="about AuditExtension class" Url="html/2075727343.htm" />
+    <HelpKINode Title="all members" Url="html/483344365.htm" />
+    <HelpKINode Title="methods" Url="html/667383591.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditExtension.BeginAudit(Of T) method" Url="html/909434453.htm" />
+  <HelpKINode Title="AuditExtension.BeginAudit&lt;T&gt; method" Url="html/909434453.htm" />
+  <HelpKINode Title="AuditField method">
+    <HelpKINode Title="AuditField Method " Url="html/1292091954.htm" />
+    <HelpKINode Title="AuditField Method " Url="html/807506250.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditFieldDefinition class">
+    <HelpKINode Title="AuditFieldDefinition Class" Url="html/716804712.htm" />
+    <HelpKINode Title="AuditFieldDefinition Members" Url="html/1957381574.htm" />
+    <HelpKINode Title="about AuditFieldDefinition class" Url="html/716804712.htm" />
+    <HelpKINode Title="all members" Url="html/1957381574.htm" />
+    <HelpKINode Title="methods" Url="html/988848034.htm" />
+    <HelpKINode Title="properties" Url="html/744416212.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditFieldDefinition.FieldDescription property" Url="html/1952574029.htm" />
+  <HelpKINode Title="AuditFieldDefinition.FieldName property" Url="html/1314837325.htm" />
+  <HelpKINode Title="AuditFields property" Url="html/1071649486.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T) class">
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Class" Url="html/430408745.htm" />
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Members" Url="html/1644149230.htm" />
+    <HelpKINode Title="about AuditHierarchyConfigurationExpression(Of T) class" Url="html/430408745.htm" />
+    <HelpKINode Title="all members" Url="html/1644149230.htm" />
+    <HelpKINode Title="constructor" Url="html/51940733.htm" />
+    <HelpKINode Title="methods" Url="html/196071363.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).AuditCompositeKey method" Url="html/1561070208.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).AuditField method" Url="html/807506250.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).AuditHierarchyConfigurationExpression constructor" Url="html/51940733.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).AuditRelation(Of TRel) method" Url="html/835600479.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).EntityName method" Url="html/53857139.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).ExcludeSameNameSpaceOf(Of TExclude) method" Url="html/1293168447.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).ExcludeTable(Of TExclude) method" Url="html/796562779.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression(Of T).IgnoreIfNoFieldChanged method" Url="html/18045848.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt; class">
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Class" Url="html/430408745.htm" />
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Members" Url="html/1644149230.htm" />
+    <HelpKINode Title="about AuditHierarchyConfigurationExpression&lt;T&gt; class" Url="html/430408745.htm" />
+    <HelpKINode Title="all members" Url="html/1644149230.htm" />
+    <HelpKINode Title="constructor" Url="html/51940733.htm" />
+    <HelpKINode Title="methods" Url="html/196071363.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.AuditCompositeKey method" Url="html/1561070208.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.AuditField method" Url="html/807506250.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.AuditHierarchyConfigurationExpression constructor" Url="html/51940733.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.AuditRelation&lt;TRel&gt; method" Url="html/835600479.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.EntityName method" Url="html/53857139.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.ExcludeSameNameSpaceOf&lt;TExclude&gt; method" Url="html/1293168447.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.ExcludeTable&lt;TExclude&gt; method" Url="html/796562779.htm" />
+  <HelpKINode Title="AuditHierarchyConfigurationExpression&lt;T&gt;.IgnoreIfNoFieldChanged method" Url="html/18045848.htm" />
+  <HelpKINode Title="AuditInterceptor class">
+    <HelpKINode Title="AuditInterceptor Class" Url="html/1406259637.htm" />
+    <HelpKINode Title="AuditInterceptor Members" Url="html/1071674593.htm" />
+    <HelpKINode Title="about AuditInterceptor class" Url="html/1406259637.htm" />
+    <HelpKINode Title="all members" Url="html/1071674593.htm" />
+    <HelpKINode Title="constructor" Url="html/281265828.htm" />
+    <HelpKINode Title="methods" Url="html/1513543105.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditInterceptor.AuditInterceptor constructor" Url="html/281265828.htm" />
+  <HelpKINode Title="AuditInterceptor.Intercept method" Url="html/276163028.htm" />
+  <HelpKINode Title="AuditManager class">
+    <HelpKINode Title="AuditManager Class" Url="html/2067190500.htm" />
+    <HelpKINode Title="AuditManager Members" Url="html/2133723664.htm" />
+    <HelpKINode Title="about AuditManager class" Url="html/2067190500.htm" />
+    <HelpKINode Title="all members" Url="html/2133723664.htm" />
+    <HelpKINode Title="constructor" Url="html/1310591616.htm" />
+    <HelpKINode Title="methods" Url="html/1958298779.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditManager.AuditManager constructor" Url="html/1310591616.htm" />
+  <HelpKINode Title="AuditManager.Commit method" Url="html/731126233.htm" />
+  <HelpKINode Title="AuditManager.CommitAsync method" Url="html/766536263.htm" />
+  <HelpKINode Title="AuditManager.GetFieldHistory method" Url="html/671312279.htm" />
+  <HelpKINode Title="AuditManager.GetFieldHistoryByCompositeKey(Of T) method" Url="html/2131936857.htm" />
+  <HelpKINode Title="AuditManager.GetFieldHistoryByCompositeKey&lt;T&gt; method" Url="html/2131936857.htm" />
+  <HelpKINode Title="AuditManager.GetFieldHistoryByCompositeKeyRelation(Of T) method" Url="html/1471952934.htm" />
+  <HelpKINode Title="AuditManager.GetFieldHistoryByCompositeKeyRelation&lt;T&gt; method" Url="html/1471952934.htm" />
+  <HelpKINode Title="AuditManager.GetLastUpdate method" Url="html/826078214.htm" />
+  <HelpKINode Title="AuditManager.GetLastUpdateByCompositeKey method" Url="html/2005533616.htm" />
+  <HelpKINode Title="AuditManager.WriteAuditAdded method" Url="html/1502046484.htm" />
+  <HelpKINode Title="AuditManager.WriteAuditDeleted method" Url="html/1000445908.htm" />
+  <HelpKINode Title="AuditManager.WriteAuditModified method" Url="html/1917764075.htm" />
+  <HelpKINode Title="AuditProfile class">
+    <HelpKINode Title="AuditProfile Class" Url="html/429246115.htm" />
+    <HelpKINode Title="AuditProfile Members" Url="html/811601805.htm" />
+    <HelpKINode Title="about AuditProfile class" Url="html/429246115.htm" />
+    <HelpKINode Title="all members" Url="html/811601805.htm" />
+    <HelpKINode Title="methods" Url="html/626120132.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditProfile.AddCompositeKey(Of T) method" Url="html/1037140658.htm" />
+  <HelpKINode Title="AuditProfile.AddCompositeKey&lt;T&gt; method" Url="html/1037140658.htm" />
+  <HelpKINode Title="AuditProfile.Configure method" Url="html/553626497.htm" />
+  <HelpKINode Title="AuditProfile.EntityName(Of T) method" Url="html/266022758.htm" />
+  <HelpKINode Title="AuditProfile.EntityName&lt;T&gt; method" Url="html/266022758.htm" />
+  <HelpKINode Title="AuditProfile.Exclude method" Url="html/829755077.htm" />
+  <HelpKINode Title="AuditProfile.ExcludeNameSpace method" Url="html/968894736.htm" />
+  <HelpKINode Title="AuditProfile.GetConfiguration method" Url="html/1945696227.htm" />
+  <HelpKINode Title="AuditProfile.SetIgnoreIfNoFieldChanged(Of T) method" Url="html/1202806752.htm" />
+  <HelpKINode Title="AuditProfile.SetIgnoreIfNoFieldChanged&lt;T&gt; method" Url="html/1202806752.htm" />
+  <HelpKINode Title="AuditProvider class">
+    <HelpKINode Title="AuditProvider Class" Url="html/156637976.htm" />
+    <HelpKINode Title="AuditProvider Members" Url="html/1450315661.htm" />
+    <HelpKINode Title="about AuditProvider class" Url="html/156637976.htm" />
+    <HelpKINode Title="all members" Url="html/1450315661.htm" />
+    <HelpKINode Title="constructor" Url="html/1438908268.htm" />
+    <HelpKINode Title="methods" Url="html/1296768474.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditProvider.AddAudit method" Url="html/1880092781.htm" />
+  <HelpKINode Title="AuditProvider.AuditProvider constructor" Url="html/1438908268.htm" />
+  <HelpKINode Title="AuditProvider.GetAuditTrailByCompositeKey method" Url="html/930339200.htm" />
+  <HelpKINode Title="AuditProvider.GetAuditTrailByCompositeKeyRelation method" Url="html/1094785779.htm" />
+  <HelpKINode Title="AuditProvider.Write method" Url="html/1250210092.htm" />
+  <HelpKINode Title="AuditProvider.WriteAsync method" Url="html/2019207776.htm" />
+  <HelpKINode Title="AuditReferences property" Url="html/1805522303.htm" />
+  <HelpKINode Title="AuditRelation(Of TRel) method">
+    <HelpKINode Title="AuditRelation(TRel) Method " Url="html/1963073790.htm" />
+    <HelpKINode Title="AuditRelation(TRel) Method " Url="html/835600479.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditRelation&lt;TRel&gt; method">
+    <HelpKINode Title="AuditRelation(TRel) Method " Url="html/1963073790.htm" />
+    <HelpKINode Title="AuditRelation(TRel) Method " Url="html/835600479.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditTrail class">
+    <HelpKINode Title="AuditTrail Class" Url="html/1852102861.htm" />
+    <HelpKINode Title="AuditTrail Members" Url="html/1283975208.htm" />
+    <HelpKINode Title="about AuditTrail class" Url="html/1852102861.htm" />
+    <HelpKINode Title="all members" Url="html/1283975208.htm" />
+    <HelpKINode Title="methods" Url="html/1549291266.htm" />
+    <HelpKINode Title="properties" Url="html/1494192537.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditTrail.Action property" Url="html/63739725.htm" />
+  <HelpKINode Title="AuditTrail.ClaveEntidad property" Url="html/51584400.htm" />
+  <HelpKINode Title="AuditTrail.CompositeKey property" Url="html/732625794.htm" />
+  <HelpKINode Title="AuditTrail.Datos property" Url="html/1789133040.htm" />
+  <HelpKINode Title="AuditTrail.Entidad property" Url="html/768501847.htm" />
+  <HelpKINode Title="AuditTrail.FechaUpdate property" Url="html/91550548.htm" />
+  <HelpKINode Title="AuditTrail.Id property" Url="html/1671991785.htm" />
+  <HelpKINode Title="AuditTrail.Usuario property" Url="html/822734946.htm" />
+  <HelpKINode Title="AuditTrailTypeConfiguration class">
+    <HelpKINode Title="AuditTrailTypeConfiguration Class" Url="html/237184548.htm" />
+    <HelpKINode Title="AuditTrailTypeConfiguration Members" Url="html/1617681341.htm" />
+    <HelpKINode Title="about AuditTrailTypeConfiguration class" Url="html/237184548.htm" />
+    <HelpKINode Title="all members" Url="html/1617681341.htm" />
+    <HelpKINode Title="constructor" Url="html/2007696591.htm" />
+    <HelpKINode Title="methods" Url="html/394540203.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuditTrailTypeConfiguration.AuditTrailTypeConfiguration constructor" Url="html/2007696591.htm" />
+  <HelpKINode Title="BeginAudit(Of T) method" Url="html/909434453.htm" />
+  <HelpKINode Title="BeginAudit&lt;T&gt; method" Url="html/909434453.htm" />
+  <HelpKINode Title="ChangeDate property" Url="html/736060165.htm" />
+  <HelpKINode Title="ClaveEntidad property" Url="html/51584400.htm" />
+  <HelpKINode Title="Commit method">
+    <HelpKINode Title="Commit Method " Url="html/1444332468.htm" />
+    <HelpKINode Title="Commit Method " Url="html/731126233.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommitAsync method">
+    <HelpKINode Title="CommitAsync Method " Url="html/766536263.htm" />
+    <HelpKINode Title="CommitAsync Method " Url="html/1200330753.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompositeKey property">
+    <HelpKINode Title="CompositeKey Property " Url="html/229973318.htm" />
+    <HelpKINode Title="CompositeKey Property " Url="html/732625794.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompositeKeyFunc property" Url="html/2021612017.htm" />
+  <HelpKINode Title="Configure method" Url="html/553626497.htm" />
+  <HelpKINode Title="Create method" Url="html/1742666311.htm" />
+  <HelpKINode Title="Dal.Audit namespace" Url="html/1004395399.htm" />
+  <HelpKINode Title="Dal.Audit.AuditConfiguration class">
+    <HelpKINode Title="AuditConfiguration Class" Url="html/1312320846.htm" />
+    <HelpKINode Title="AuditConfiguration Members" Url="html/141712561.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditConfigurationEntry class">
+    <HelpKINode Title="AuditConfigurationEntry Class" Url="html/2027450226.htm" />
+    <HelpKINode Title="AuditConfigurationEntry Members" Url="html/342823224.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditConfigurationEntry.AuditConfigurationReferenceEntry class">
+    <HelpKINode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Class" Url="html/2133500636.htm" />
+    <HelpKINode Title="AuditConfigurationEntry.AuditConfigurationReferenceEntry Members" Url="html/145918986.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditData class">
+    <HelpKINode Title="AuditData Class" Url="html/1232744772.htm" />
+    <HelpKINode Title="AuditData Members" Url="html/1668804811.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditDataDetail class">
+    <HelpKINode Title="AuditDataDetail Class" Url="html/1828205648.htm" />
+    <HelpKINode Title="AuditDataDetail Members" Url="html/541982391.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditDataDetailRelation class">
+    <HelpKINode Title="AuditDataDetailRelation Class" Url="html/298205797.htm" />
+    <HelpKINode Title="AuditDataDetailRelation Members" Url="html/330788651.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditExtension class">
+    <HelpKINode Title="AuditExtension Class" Url="html/2075727343.htm" />
+    <HelpKINode Title="AuditExtension Members" Url="html/483344365.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditFieldDefinition class">
+    <HelpKINode Title="AuditFieldDefinition Class" Url="html/716804712.htm" />
+    <HelpKINode Title="AuditFieldDefinition Members" Url="html/1957381574.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditHierarchyConfigurationExpression(Of T) class">
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Class" Url="html/430408745.htm" />
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Members" Url="html/1644149230.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditHierarchyConfigurationExpression&lt;T&gt; class">
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Class" Url="html/430408745.htm" />
+    <HelpKINode Title="AuditHierarchyConfigurationExpression(T) Members" Url="html/1644149230.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditInterceptor class">
+    <HelpKINode Title="AuditInterceptor Class" Url="html/1406259637.htm" />
+    <HelpKINode Title="AuditInterceptor Members" Url="html/1071674593.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditManager class">
+    <HelpKINode Title="AuditManager Class" Url="html/2067190500.htm" />
+    <HelpKINode Title="AuditManager Members" Url="html/2133723664.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditProfile class">
+    <HelpKINode Title="AuditProfile Class" Url="html/429246115.htm" />
+    <HelpKINode Title="AuditProfile Members" Url="html/811601805.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditProvider class">
+    <HelpKINode Title="AuditProvider Class" Url="html/156637976.htm" />
+    <HelpKINode Title="AuditProvider Members" Url="html/1450315661.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditTrail class">
+    <HelpKINode Title="AuditTrail Class" Url="html/1852102861.htm" />
+    <HelpKINode Title="AuditTrail Members" Url="html/1283975208.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.AuditTrailTypeConfiguration class">
+    <HelpKINode Title="AuditTrailTypeConfiguration Class" Url="html/237184548.htm" />
+    <HelpKINode Title="AuditTrailTypeConfiguration Members" Url="html/1617681341.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.Helpers class">
+    <HelpKINode Title="Helpers Class" Url="html/793936388.htm" />
+    <HelpKINode Title="Helpers Members" Url="html/755059361.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.IAppContext interface">
+    <HelpKINode Title="IAppContext Interface" Url="html/5713069.htm" />
+    <HelpKINode Title="IAppContext Members" Url="html/483372122.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyConfigurationExpression interface" Url="html/1045004426.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyConfigurationExpression(Of T) interface" Url="html/556239832.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyConfigurationExpression&lt;T&gt; interface" Url="html/556239832.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyTableConfigurationExpression interface" Url="html/952218259.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyTableConfigurationExpression(Of T) interface" Url="html/1761843977.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditHierarchyTableConfigurationExpression&lt;T&gt; interface" Url="html/1761843977.htm" />
+  <HelpKINode Title="Dal.Audit.IAuditManager interface">
+    <HelpKINode Title="IAuditManager Interface" Url="html/149519689.htm" />
+    <HelpKINode Title="IAuditManager Members" Url="html/1381391147.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.IAuditProvider interface">
+    <HelpKINode Title="IAuditProvider Interface" Url="html/2045392226.htm" />
+    <HelpKINode Title="IAuditProvider Members" Url="html/1156019707.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.LoggingProxy(Of T) class">
+    <HelpKINode Title="LoggingProxy(T) Class" Url="html/1754832039.htm" />
+    <HelpKINode Title="LoggingProxy(T) Members" Url="html/796040383.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Dal.Audit.LoggingProxy&lt;T&gt; class">
+    <HelpKINode Title="LoggingProxy(T) Class" Url="html/1754832039.htm" />
+    <HelpKINode Title="LoggingProxy(T) Members" Url="html/796040383.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Datos property" Url="html/1789133040.htm" />
+  <HelpKINode Title="DescriptionPropertyName property" Url="html/293849646.htm" />
+  <HelpKINode Title="DescriptionPropertyType property" Url="html/1764252395.htm" />
+  <HelpKINode Title="Entidad property" Url="html/768501847.htm" />
+  <HelpKINode Title="EntityKey property">
+    <HelpKINode Title="EntityKey Property " Url="html/1110940576.htm" />
+    <HelpKINode Title="EntityKey Property " Url="html/2115109245.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EntityKeyName property" Url="html/1148901265.htm" />
+  <HelpKINode Title="EntityKeyPropertyName property" Url="html/644590983.htm" />
+  <HelpKINode Title="EntityName method">
+    <HelpKINode Title="EntityName Method " Url="html/53857139.htm" />
+    <HelpKINode Title="EntityName Method " Url="html/150323930.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EntityName property">
+    <HelpKINode Title="EntityName Property " Url="html/661632904.htm" />
+    <HelpKINode Title="EntityName Property " Url="html/539524956.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EntityName(Of T) method" Url="html/266022758.htm" />
+  <HelpKINode Title="EntityName&lt;T&gt; method" Url="html/266022758.htm" />
+  <HelpKINode Title="Exclude method" Url="html/829755077.htm" />
+  <HelpKINode Title="ExcludeNameSpace method" Url="html/968894736.htm" />
+  <HelpKINode Title="ExcludeSameNameSpaceOf(Of TExclude) method">
+    <HelpKINode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/1293168447.htm" />
+    <HelpKINode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/631246204.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExcludeSameNameSpaceOf&lt;TExclude&gt; method">
+    <HelpKINode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/1293168447.htm" />
+    <HelpKINode Title="ExcludeSameNameSpaceOf(TExclude) Method " Url="html/631246204.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExcludeTable(Of TExclude) method">
+    <HelpKINode Title="ExcludeTable(TExclude) Method " Url="html/796562779.htm" />
+    <HelpKINode Title="ExcludeTable(TExclude) Method " Url="html/1981078350.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExcludeTable&lt;TExclude&gt; method">
+    <HelpKINode Title="ExcludeTable(TExclude) Method " Url="html/1981078350.htm" />
+    <HelpKINode Title="ExcludeTable(TExclude) Method " Url="html/796562779.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FechaUpdate property" Url="html/91550548.htm" />
+  <HelpKINode Title="FieldDescription property">
+    <HelpKINode Title="FieldDescription Property " Url="html/914641338.htm" />
+    <HelpKINode Title="FieldDescription Property " Url="html/1952574029.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FieldName property">
+    <HelpKINode Title="FieldName Property " Url="html/1314837325.htm" />
+    <HelpKINode Title="FieldName Property " Url="html/1190662417.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Generic property" Url="html/1667011514.htm" />
+  <HelpKINode Title="GetAuditTrailByCompositeKey method">
+    <HelpKINode Title="GetAuditTrailByCompositeKey Method " Url="html/930339200.htm" />
+    <HelpKINode Title="GetAuditTrailByCompositeKey Method " Url="html/1768159433.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetAuditTrailByCompositeKeyRelation method">
+    <HelpKINode Title="GetAuditTrailByCompositeKeyRelation Method " Url="html/1094785779.htm" />
+    <HelpKINode Title="GetAuditTrailByCompositeKeyRelation Method " Url="html/490230918.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetConfiguration method" Url="html/1945696227.htm" />
+  <HelpKINode Title="GetDbPropertyValue method" Url="html/1106778818.htm" />
+  <HelpKINode Title="GetFieldHistory method">
+    <HelpKINode Title="GetFieldHistory Method " Url="html/671312279.htm" />
+    <HelpKINode Title="GetFieldHistory Method " Url="html/1802946080.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFieldHistoryByCompositeKey(Of T) method">
+    <HelpKINode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/1816652974.htm" />
+    <HelpKINode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/2131936857.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFieldHistoryByCompositeKey&lt;T&gt; method">
+    <HelpKINode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/2131936857.htm" />
+    <HelpKINode Title="GetFieldHistoryByCompositeKey(T) Method " Url="html/1816652974.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation(Of T) method">
+    <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1410070859.htm" />
+    <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1471952934.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation&lt;T&gt; method">
+    <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1410070859.htm" />
+    <HelpKINode Title="GetFieldHistoryByCompositeKeyRelation(T) Method " Url="html/1471952934.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFullPropertyName(Of T, TProperty) method" Url="html/1110787279.htm" />
+  <HelpKINode Title="GetFullPropertyName&lt;T, TProperty&gt; method" Url="html/1110787279.htm" />
+  <HelpKINode Title="GetLastUpdate method">
+    <HelpKINode Title="GetLastUpdate Method " Url="html/1701972998.htm" />
+    <HelpKINode Title="GetLastUpdate Method " Url="html/826078214.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetLastUpdateByCompositeKey method">
+    <HelpKINode Title="GetLastUpdateByCompositeKey Method " Url="html/427381765.htm" />
+    <HelpKINode Title="GetLastUpdateByCompositeKey Method " Url="html/2005533616.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetMemberExpression method" Url="html/2103987926.htm" />
+  <HelpKINode Title="Helpers class">
+    <HelpKINode Title="Helpers Class" Url="html/793936388.htm" />
+    <HelpKINode Title="Helpers Members" Url="html/755059361.htm" />
+    <HelpKINode Title="about Helpers class" Url="html/793936388.htm" />
+    <HelpKINode Title="all members" Url="html/755059361.htm" />
+    <HelpKINode Title="methods" Url="html/697959160.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Helpers.GetDbPropertyValue method" Url="html/1106778818.htm" />
+  <HelpKINode Title="Helpers.GetFullPropertyName(Of T, TProperty) method" Url="html/1110787279.htm" />
+  <HelpKINode Title="Helpers.GetFullPropertyName&lt;T, TProperty&gt; method" Url="html/1110787279.htm" />
+  <HelpKINode Title="Helpers.GetMemberExpression method" Url="html/2103987926.htm" />
+  <HelpKINode Title="IAppContext interface">
+    <HelpKINode Title="IAppContext Interface" Url="html/5713069.htm" />
+    <HelpKINode Title="IAppContext Members" Url="html/483372122.htm" />
+    <HelpKINode Title="about IAppContext interface" Url="html/5713069.htm" />
+    <HelpKINode Title="all members" Url="html/483372122.htm" />
+    <HelpKINode Title="methods" Url="html/1926499865.htm" />
+    <HelpKINode Title="properties" Url="html/1718969904.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAppContext.UserName property" Url="html/337838569.htm" />
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression interface">
+    <HelpKINode Title="IAuditHierarchyConfigurationExpression Members" Url="html/1045004426.htm" />
+    <HelpKINode Title="all members" Url="html/1045004426.htm" />
+    <HelpKINode Title="methods" Url="html/844643917.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression(Of T) interface">
+    <HelpKINode Title="IAuditHierarchyConfigurationExpression(T) Interface" Url="html/556239832.htm" />
+    <HelpKINode Title="about IAuditHierarchyConfigurationExpression(Of T) interface" Url="html/556239832.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression(Of T).ExcludeSameNameSpaceOf(Of TExclude) method" Url="html/631246204.htm" />
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression(Of T).ExcludeTable(Of TExclude) method" Url="html/1981078350.htm" />
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression&lt;T&gt; interface">
+    <HelpKINode Title="IAuditHierarchyConfigurationExpression(T) Interface" Url="html/556239832.htm" />
+    <HelpKINode Title="about IAuditHierarchyConfigurationExpression&lt;T&gt; interface" Url="html/556239832.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression&lt;T&gt;.ExcludeSameNameSpaceOf&lt;TExclude&gt; method" Url="html/631246204.htm" />
+  <HelpKINode Title="IAuditHierarchyConfigurationExpression&lt;T&gt;.ExcludeTable&lt;TExclude&gt; method" Url="html/1981078350.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression interface">
+    <HelpKINode Title="IAuditHierarchyTableConfigurationExpression Members" Url="html/952218259.htm" />
+    <HelpKINode Title="all members" Url="html/952218259.htm" />
+    <HelpKINode Title="methods" Url="html/1466357753.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T) interface">
+    <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(T) Interface" Url="html/1761843977.htm" />
+    <HelpKINode Title="about IAuditHierarchyTableConfigurationExpression(Of T) interface" Url="html/1761843977.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T).AuditCompositeKey method" Url="html/2001451671.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T).AuditField method" Url="html/1292091954.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T).AuditRelation(Of TRel) method" Url="html/1963073790.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T).EntityName method" Url="html/150323930.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(Of T).IgnoreIfNoFieldChanged method" Url="html/1246779319.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt; interface">
+    <HelpKINode Title="IAuditHierarchyTableConfigurationExpression(T) Interface" Url="html/1761843977.htm" />
+    <HelpKINode Title="about IAuditHierarchyTableConfigurationExpression&lt;T&gt; interface" Url="html/1761843977.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt;.AuditCompositeKey method" Url="html/2001451671.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt;.AuditField method" Url="html/1292091954.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt;.AuditRelation&lt;TRel&gt; method" Url="html/1963073790.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt;.EntityName method" Url="html/150323930.htm" />
+  <HelpKINode Title="IAuditHierarchyTableConfigurationExpression&lt;T&gt;.IgnoreIfNoFieldChanged method" Url="html/1246779319.htm" />
+  <HelpKINode Title="IAuditManager interface">
+    <HelpKINode Title="IAuditManager Interface" Url="html/149519689.htm" />
+    <HelpKINode Title="IAuditManager Members" Url="html/1381391147.htm" />
+    <HelpKINode Title="about IAuditManager interface" Url="html/149519689.htm" />
+    <HelpKINode Title="all members" Url="html/1381391147.htm" />
+    <HelpKINode Title="methods" Url="html/1282977558.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditManager.Commit method" Url="html/1444332468.htm" />
+  <HelpKINode Title="IAuditManager.CommitAsync method" Url="html/1200330753.htm" />
+  <HelpKINode Title="IAuditManager.GetFieldHistory method" Url="html/1802946080.htm" />
+  <HelpKINode Title="IAuditManager.GetFieldHistoryByCompositeKey(Of T) method" Url="html/1816652974.htm" />
+  <HelpKINode Title="IAuditManager.GetFieldHistoryByCompositeKey&lt;T&gt; method" Url="html/1816652974.htm" />
+  <HelpKINode Title="IAuditManager.GetFieldHistoryByCompositeKeyRelation(Of T) method" Url="html/1410070859.htm" />
+  <HelpKINode Title="IAuditManager.GetFieldHistoryByCompositeKeyRelation&lt;T&gt; method" Url="html/1410070859.htm" />
+  <HelpKINode Title="IAuditManager.GetLastUpdate method" Url="html/1701972998.htm" />
+  <HelpKINode Title="IAuditManager.GetLastUpdateByCompositeKey method" Url="html/427381765.htm" />
+  <HelpKINode Title="IAuditManager.WriteAuditAdded method" Url="html/84432100.htm" />
+  <HelpKINode Title="IAuditManager.WriteAuditDeleted method" Url="html/741245264.htm" />
+  <HelpKINode Title="IAuditManager.WriteAuditModified method" Url="html/860972970.htm" />
+  <HelpKINode Title="IAuditProvider interface">
+    <HelpKINode Title="IAuditProvider Interface" Url="html/2045392226.htm" />
+    <HelpKINode Title="IAuditProvider Members" Url="html/1156019707.htm" />
+    <HelpKINode Title="about IAuditProvider interface" Url="html/2045392226.htm" />
+    <HelpKINode Title="all members" Url="html/1156019707.htm" />
+    <HelpKINode Title="methods" Url="html/359174997.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAuditProvider.AddAudit method" Url="html/1738800570.htm" />
+  <HelpKINode Title="IAuditProvider.GetAuditTrailByCompositeKey method" Url="html/1768159433.htm" />
+  <HelpKINode Title="IAuditProvider.GetAuditTrailByCompositeKeyRelation method" Url="html/490230918.htm" />
+  <HelpKINode Title="IAuditProvider.Write method" Url="html/432576510.htm" />
+  <HelpKINode Title="IAuditProvider.WriteAsync method" Url="html/1150769181.htm" />
+  <HelpKINode Title="Id property" Url="html/1671991785.htm" />
+  <HelpKINode Title="IgnoreIfNoFieldChanged method">
+    <HelpKINode Title="IgnoreIfNoFieldChanged Method " Url="html/18045848.htm" />
+    <HelpKINode Title="IgnoreIfNoFieldChanged Method " Url="html/1246779319.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IgnoreIfNoFieldChanged property">
+    <HelpKINode Title="IgnoreIfNoFieldChanged Property " Url="html/1407098241.htm" />
+    <HelpKINode Title="IgnoreIfNoFieldChanged Property " Url="html/2097548062.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Intercept method" Url="html/276163028.htm" />
+  <HelpKINode Title="Invoke method">
+    <HelpKINode Title="Invoke Method " Url="html/1856133105.htm" />
+    <HelpKINode Title="Invoke Method " Url="html/1767000367.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsAuditable property" Url="html/46359971.htm" />
+  <HelpKINode Title="LoggingProxy(Of T) class">
+    <HelpKINode Title="LoggingProxy(T) Class" Url="html/1754832039.htm" />
+    <HelpKINode Title="LoggingProxy(T) Members" Url="html/796040383.htm" />
+    <HelpKINode Title="about LoggingProxy(Of T) class" Url="html/1754832039.htm" />
+    <HelpKINode Title="all members" Url="html/796040383.htm" />
+    <HelpKINode Title="methods" Url="html/1941569486.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoggingProxy(Of T).Create method" Url="html/1742666311.htm" />
+  <HelpKINode Title="LoggingProxy(Of T).Invoke method">
+    <HelpKINode Title="Invoke Method " Url="html/1767000367.htm" />
+    <HelpKINode Title="Invoke Method " Url="html/1856133105.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoggingProxy&lt;T&gt; class">
+    <HelpKINode Title="LoggingProxy(T) Class" Url="html/1754832039.htm" />
+    <HelpKINode Title="LoggingProxy(T) Members" Url="html/796040383.htm" />
+    <HelpKINode Title="about LoggingProxy&lt;T&gt; class" Url="html/1754832039.htm" />
+    <HelpKINode Title="all members" Url="html/796040383.htm" />
+    <HelpKINode Title="methods" Url="html/1941569486.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoggingProxy&lt;T&gt;.Create method" Url="html/1742666311.htm" />
+  <HelpKINode Title="LoggingProxy&lt;T&gt;.Invoke method">
+    <HelpKINode Title="Invoke Method " Url="html/1856133105.htm" />
+    <HelpKINode Title="Invoke Method " Url="html/1767000367.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NewValue property" Url="html/1418106329.htm" />
+  <HelpKINode Title="ReferenceCollectionName property" Url="html/609967540.htm" />
+  <HelpKINode Title="ReferencePropertyName property" Url="html/1855284856.htm" />
+  <HelpKINode Title="ReferenceType property" Url="html/704584081.htm" />
+  <HelpKINode Title="SetIgnoreIfNoFieldChanged(Of T) method" Url="html/1202806752.htm" />
+  <HelpKINode Title="SetIgnoreIfNoFieldChanged&lt;T&gt; method" Url="html/1202806752.htm" />
+  <HelpKINode Title="UserName property">
+    <HelpKINode Title="UserName Property " Url="html/1407739003.htm" />
+    <HelpKINode Title="UserName Property " Url="html/337838569.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Usuario property" Url="html/822734946.htm" />
+  <HelpKINode Title="ValueDescription property" Url="html/834905565.htm" />
+  <HelpKINode Title="Write method">
+    <HelpKINode Title="Write Method " Url="html/432576510.htm" />
+    <HelpKINode Title="Write Method " Url="html/1250210092.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteAsync method">
+    <HelpKINode Title="WriteAsync Method " Url="html/1150769181.htm" />
+    <HelpKINode Title="WriteAsync Method " Url="html/2019207776.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteAuditAdded method">
+    <HelpKINode Title="WriteAuditAdded Method " Url="html/1502046484.htm" />
+    <HelpKINode Title="WriteAuditAdded Method " Url="html/84432100.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteAuditDeleted method">
+    <HelpKINode Title="WriteAuditDeleted Method " Url="html/1000445908.htm" />
+    <HelpKINode Title="WriteAuditDeleted Method " Url="html/741245264.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteAuditModified method">
+    <HelpKINode Title="WriteAuditModified Method " Url="html/1917764075.htm" />
+    <HelpKINode Title="WriteAuditModified Method " Url="html/860972970.htm" />
+  </HelpKINode>
+</HelpKI>
