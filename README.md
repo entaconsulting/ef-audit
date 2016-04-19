@@ -6,6 +6,8 @@ Dal.Base
 --------
   
 Implementa los patrones Unit of Work y Repository sobre un DbContext de EF, y define las superclases que deben ser heredadas por las entidades de dominio para funcionar con esta librería.
+
+Ver [RepositoryTest.cs](https://github.com/entaconsulting/ef-extensions/blob/master/Solution/Dal.Test/RepositoryTest.cs) para ejemplos de las operaciones de Repository 
   
 Dal.History
 -----------
@@ -35,3 +37,4 @@ Implementa operaciones tales como
     //generar una nueva versión de datos a partir de un momento
     var newVersion = foo.CreateVersion(x=>x.VersionAttributes, pointInTime, unitOfWork)
 
+En [HistoryTest.cs](https://github.com/entaconsulting/ef-extensions/blob/master/Solution/Dal.Test/HistoryTest.cs) se describen más ejemplos de uso de la librería y aplicación a casos concretos.
