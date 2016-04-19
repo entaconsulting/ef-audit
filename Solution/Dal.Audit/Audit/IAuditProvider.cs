@@ -21,6 +21,6 @@ namespace Audit.Audit
 
         IEnumerable<AuditDataDetailRelation> GetAuditTrailByCompositeKeyRelation(string entityName, string compositeKey);
         void Write();
-        void WriteAsync();
+        Task WriteAsync();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Audit.Audit
 {
@@ -9,6 +10,7 @@ namespace Audit.Audit
         public string ClaveEntidad { get; set; }
         public DateTime FechaUpdate { get; set; }
         public string Usuario { get; set; }
+        [Column(TypeName = "xml")]
         public string Datos { get; set; }
         public string CompositeKey { get; set; }
         public string Action { get; set; }

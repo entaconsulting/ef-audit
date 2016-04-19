@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Audit.Audit
 {
@@ -29,8 +30,9 @@ namespace Audit.Audit
         void WriteAuditAdded(DbEntityEntry entry, DateTime date);
         void WriteAuditModified(DbEntityEntry entry, DateTime date);
         void WriteAuditDeleted(DbEntityEntry entry, DateTime date);
+        void Commit();
+        Task CommitAsync();
 
-        void BeginAudit(DbContext dbContext);
     }
 
 

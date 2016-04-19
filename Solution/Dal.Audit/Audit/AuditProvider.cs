@@ -52,7 +52,7 @@ namespace Audit.Audit
                                 change.field.query('data(./description)') as newValue,
                                 change.field.query('data(./propertyDescription)') as fieldDescription,
                                 change.field.query('data(./valueDescription)') as valueDescription,
-	                            change.field.query('data(./action)') as action
+	                            Action as action
                         from audittrails cross apply datos.nodes('{2}') as change(field)
                         where   ClaveEntidad = '{0}'
                                 AND Entidad = '{1}'
@@ -83,7 +83,7 @@ namespace Audit.Audit
                                 change.field.query('data(./description)') as newValue,
                                 change.field.query('data(./propertyDescription)') as fieldDescription,
                                 change.field.query('data(./valueDescription)') as valueDescription,
-	                            change.field.query('data(./action)') as action
+	                            Action as action
                         from audittrails cross apply datos.nodes('{2}') as change(field)
                         where   CompositeKey = '{0}'
                                 AND Entidad = '{1}'
@@ -108,9 +108,9 @@ namespace Audit.Audit
             _dbContext.SaveChanges();
         }
 
-        public void WriteAsync()
+        public async Task WriteAsync()
         {
-            _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
 
         public void AddAudit(DbEntityEntry entry, DateTime date, string user, AuditConfigurationEntry config, EntityState writeMode)
@@ -226,7 +226,7 @@ namespace Audit.Audit
                                 fieldsChanged = true;
 
                                 writer.WriteStartElement(auditableField.FieldName);
-                                writer.WriteElementString("action", "Modified");
+                                //writer.WriteElementString("action", "Modified");
                                 writer.WriteElementString("description", currentValue);
 
                                 writer.WriteEndElement();
@@ -244,7 +244,7 @@ namespace Audit.Audit
                                 : string.Empty;
 
                             writer.WriteStartElement(property.Name);
-                            writer.WriteElementString("action", "Added");
+                            //writer.WriteElementString("action", "Added");
                             writer.WriteElementString("description", currentValue);
 
                             writer.WriteEndElement();

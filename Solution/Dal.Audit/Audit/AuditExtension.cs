@@ -1,14 +1,14 @@
-﻿using System.Data.Entity;
+﻿using Audit;
+using Audit.Audit;
 
-namespace Audit.Audit
+namespace Dal.Audit.Audit
 {
     public static class AuditExtension
     {
 
-        public static void BeginAudit(this DbContext dbContext, IAuditProvider auditProvider, AuditProfile auditProfile, IAppContext appContext)
+        public static T BeginAudit<T>(this T dbContext, IAuditManager auditManager)
         {
-            //return new AuditManager(auditProvider, auditProfile, appContext, dbContext);
-
+            return (T)new Castle.DynamicProxy.ProxyGenerator().CreateClassProxy(typeof(T), new AuditInterceptor(auditManager));
         }
     }
 }

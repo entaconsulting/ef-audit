@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditTest.cs" />
+    <Compile Include="Mocks\AuditTestAppContextMock.cs" />
     <Compile Include="Mocks\RepositoryFactoryMock.cs" />
     <Compile Include="HistoryTest.cs" />
     <Compile Include="RepositoryTest.cs" />
@@ -67,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dal.Audit\Dal.Audit.csproj">
+      <Project>{a47e95ee-6460-4015-9b95-0702adc4cb4a}</Project>
+      <Name>Dal.Audit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dal.Base\Dal.Base.csproj">
       <Project>{FF9D81A9-99F6-4D0F-AF70-00EB6540C161}</Project>
       <Name>Dal.Base</Name>

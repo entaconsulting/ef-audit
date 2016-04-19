@@ -30,7 +30,7 @@ namespace Dal.Test
             var repositoryFactory = new RepositoryFactoryMock(dbContext);
             _uow = new UoW(dbContext,repositoryFactory);
 
-            //creo una nueva entidad para las pruebas de historicidad
+            //instancion repositorio de usuarios
             _rUsuarios = _uow.GetRepository<Usuario>();
         }
 

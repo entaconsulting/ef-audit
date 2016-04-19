@@ -3,7 +3,7 @@ using Dal.Sample.Model;
 
 namespace DAL
 {
-    public class AuditCustomProfile : AuditProfile
+    public class AuditSampleProfile : AuditProfile
     {
         public override void Configure()
         {

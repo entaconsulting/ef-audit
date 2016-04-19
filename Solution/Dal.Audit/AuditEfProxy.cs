@@ -14,15 +14,11 @@ namespace Audit
 
     public class AuditInterceptor : IInterceptor
     {
-        private readonly IAuditProvider _auditProvider;
-        private readonly AuditProfile _auditProfile;
-        private readonly IAppContext _appContext;
+        private readonly IAuditManager _auditManager;
 
-        public AuditInterceptor(IAuditProvider auditProvider, AuditProfile auditProfile, IAppContext appContext)
+        public AuditInterceptor(IAuditManager auditManager)
         {
-            _auditProvider = auditProvider;
-            _auditProfile = auditProfile;
-            _appContext = appContext;
+            _auditManager = auditManager;
 
         }
 
@@ -50,13 +46,6 @@ namespace Audit
 
         private void SaveChanges(IInvocation invocation)
         {
-            //si no tiene parámetros continuo sin hacer nada porque el que realmente ejecuta el savechanges es el overload con 1 parámetro
-            if (invocation.Arguments.Length == 0)
-            {
-                invocation.Proceed();
-                return;
-            }
-
             var dbContext = invocation.InvocationTarget as DbContext;
             if (dbContext == null)
             {
@@ -87,7 +76,7 @@ namespace Audit
             //ejecuto el audit de los added despues del save changes para obtener los ids generados
             Audit(added, date, EntityState.Added);
 
-            _auditProvider.Write();
+            _auditManager.Commit();
 
             //vuelvo a desactivar el autotedect
             dbContext.Configuration.AutoDetectChangesEnabled = autoDetectChanges;
@@ -133,7 +122,7 @@ namespace Audit
                 {
                     Audit(added, date, EntityState.Added);
 
-                    _auditProvider.Write();
+                    _auditManager.Commit();
 
                     //vuelvo a desactivar el autotedect
                     dbContext.Configuration.AutoDetectChangesEnabled = autoDetectChanges;
@@ -151,129 +140,16 @@ namespace Audit
             switch (state)
             {
                 case EntityState.Added:
-                    entries.ForEach(e => WriteAuditAdded(e, date));
+                    entries.ForEach(e => _auditManager.WriteAuditAdded(e, date));
                     break;
                 case EntityState.Modified:
-                    entries.ForEach(e => WriteAuditModified(e, date));
+                    entries.ForEach(e => _auditManager.WriteAuditModified(e, date));
                     break;
                 case EntityState.Deleted:
-                    entries.ForEach(e => WriteAuditDeleted(e, date));
+                    entries.ForEach(e => _auditManager.WriteAuditDeleted(e, date));
                     break;
             }
         }
 
-        #region configuracion
-
-
-
-        #endregion
-
-
-        #region write
-
-        public void WriteAuditModified(DbEntityEntry entry, DateTime date)
-        {
-            //obtener la configuración de auditoría de la entidad
-            var config = _auditProfile.GetConfiguration(entry.Entity.GetType());
-            if (!config.IsAuditable) return;
-
-            _auditProvider.AddAudit(entry, date, _appContext.UserName, config, EntityState.Modified);
-        }
-
-        public void WriteAuditDeleted(DbEntityEntry entry, DateTime date)
-        {
-            //obtener la configuración de auditoría de la entidad
-            var config = _auditProfile.GetConfiguration(entry.Entity.GetType());
-            if (!config.IsAuditable) return;
-
-            _auditProvider.AddAudit(entry, date, _appContext.UserName, config, EntityState.Deleted);
-        }
-
-        public void WriteAuditAdded(DbEntityEntry entry, DateTime date)
-        {
-            //obtener la configuración de auditoría de la entidad
-            var config = _auditProfile.GetConfiguration(entry.Entity.GetType());
-            if (!config.IsAuditable) return;
-
-            _auditProvider.AddAudit(entry, date, _appContext.UserName, config, EntityState.Added);
-        }
-
-        #endregion
-
-        #region queries
-
-        public AuditData GetLastUpdate<T>(T entidad) where T : class
-        {
-            return GetLastUpdate<T>(entidad, new Expression<Func<T, object>>[] { });
-        }
-
-        public AuditData GetLastUpdate<T>(T entidad, params Expression<Func<T, object>>[] campos) where T : class
-        {
-            var auditTrail = _auditProvider.GetAuditTrail(entidad, _auditProfile.GetConfiguration(typeof(T)), campos);
-
-            var lastUpdate = auditTrail.OrderByDescending(d => d.ChangeDate).FirstOrDefault();
-            return lastUpdate;
-        }
-
-        public AuditData GetLastUpdate(string nombreEntidad, string claveEntidad)
-        {
-            var auditTrail = _auditProvider.GetAuditTrail(nombreEntidad, claveEntidad, new string[] { });
-            var lastUpdate = auditTrail.OrderByDescending(d => d.ChangeDate).FirstOrDefault();
-            return lastUpdate;
-
-        }
-
-        public AuditData GetLastUpdateByCompositeKey(string nombreEntidad, string copositeKey)
-        {
-            var auditTrail = _auditProvider.GetAuditTrailByCompositeKey(nombreEntidad, copositeKey, new string[] { });
-            var lastUpdate = auditTrail.OrderByDescending(d => d.ChangeDate).FirstOrDefault();
-            return lastUpdate;
-
-        }
-
-        public IEnumerable<AuditDataDetail> GetFieldHistory<T>(T entidad, params Expression<Func<T, object>>[] campos)
-            where T : class
-        {
-            var auditTrail = _auditProvider.GetAuditTrail(entidad, _auditProfile.GetConfiguration(typeof(T)), campos);
-            return auditTrail;
-        }
-
-        public IEnumerable<AuditDataDetail> GetFieldHistory<T>(string claveEntidad,
-            params Expression<Func<T, object>>[] campos) where T : class
-        {
-
-            return _auditProvider.GetAuditTrail(typeof(T).Name, claveEntidad,
-                campos.Select(Helpers.GetFullPropertyName).ToArray());
-        }
-
-        public IEnumerable<AuditDataDetail> GetFieldHistoryByCompositeKey<T>(string compositeKey,
-            params Expression<Func<T, object>>[] campos) where T : class
-        {
-
-            return _auditProvider.GetAuditTrailByCompositeKey(typeof(T).Name, compositeKey,
-                campos.Select(Helpers.GetFullPropertyName).ToArray());
-        }
-
-        public IEnumerable<AuditDataDetailRelation> GetFieldHistoryByCompositeKeyRelation<T>(string compositeKey)
-            where T : class
-        {
-
-            return _auditProvider.GetAuditTrailByCompositeKeyRelation(typeof(T).Name, compositeKey).ToArray();
-        }
-
-
-        #endregion
-    }
-
-    public class AuditConfiguration
-    {
-        public bool Generic { get; set; }
-        public LambdaExpression EntityKey { get; set; }
-        public String EntityKeyName { get; set; }
-        public string EntityName { get; set; }
-        public Func<object, string> CompositeKeyFunc { set; get; }
-        public IList<AuditFieldDefinition> AuditFields { get; set; }
-        public IList<AuditConfigurationEntry.AuditConfigurationReferenceEntry> AuditReferences { get; set; }
-        public bool IgnoreIfNoFieldChanged { get; set; }
     }
 }
