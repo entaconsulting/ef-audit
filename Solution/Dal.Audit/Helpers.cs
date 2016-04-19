@@ -6,8 +6,16 @@ using System.Linq.Expressions;
 
 namespace Dal.Audit
 {
+    /// <summary>
+    /// Class Helpers.
+    /// </summary>
     public static class Helpers
     {
+        /// <summary>
+        /// Gets the member expression.
+        /// </summary>
+        /// <param name="expression">The expression.</param>
+        /// <returns>MemberExpression.</returns>
         public static MemberExpression GetMemberExpression(LambdaExpression expression)
         {
             if (expression == null) return null;
@@ -25,6 +33,13 @@ namespace Dal.Audit
 
 
         // code adjusted to prevent horizontal overflow
+        /// <summary>
+        /// Gets the full name of the property.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TProperty">The type of the t property.</typeparam>
+        /// <param name="exp">The exp.</param>
+        /// <returns>System.String.</returns>
         public static string GetFullPropertyName<T, TProperty>(Expression<Func<T, TProperty>> exp)
         {
             MemberExpression memberExp;
@@ -79,6 +94,12 @@ namespace Dal.Audit
         }
 
 
+        /// <summary>
+        /// Gets the database property value.
+        /// </summary>
+        /// <param name="dbValues">The database values.</param>
+        /// <param name="propertyPath">The property path.</param>
+        /// <returns>System.Object.</returns>
         public static object GetDbPropertyValue(this DbPropertyValues dbValues, string propertyPath)
         {
             var path = propertyPath.Split('.');

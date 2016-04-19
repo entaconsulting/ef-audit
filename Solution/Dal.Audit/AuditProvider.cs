@@ -11,23 +11,46 @@ using System.Xml;
 
 namespace Dal.Audit
 {
+    /// <summary>
+    /// Class AuditProvider.
+    /// </summary>
+    /// <seealso cref="Dal.Audit.IAuditProvider" />
     public class AuditProvider : IAuditProvider
     {
         private readonly DbContext _dbContext;
         private const string DynamicProxyAssemblyName = "System.Data.Entity.DynamicProxies";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AuditProvider"/> class.
+        /// </summary>
+        /// <param name="dbContext">The database context.</param>
         public AuditProvider(DbContext dbContext)
         {
             _dbContext = dbContext;
 
         }
 
+        /// <summary>
+        /// Gets the audit trail.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity">The entity.</param>
+        /// <param name="config">The configuration.</param>
+        /// <param name="fields">The fields.</param>
+        /// <returns>IEnumerable&lt;AuditDataDetail&gt;.</returns>
         public IEnumerable<AuditDataDetail> GetAuditTrail<T>(T entity, AuditConfigurationEntry config,
             params Expression<Func<T, object>>[] fields) where T : class
         {
             return GetAuditTrail(GetEntityName(entity), GetEntityKey(entity, config.EntityKey), fields.Select(Helpers.GetFullPropertyName).ToArray());
         }
 
+        /// <summary>
+        /// Gets the audit trail.
+        /// </summary>
+        /// <param name="entityName">Name of the entity.</param>
+        /// <param name="entityKey">The entity key.</param>
+        /// <param name="fields">The fields.</param>
+        /// <returns>IEnumerable&lt;AuditDataDetail&gt;.</returns>
         public IEnumerable<AuditDataDetail> GetAuditTrail(string entityName, string entityKey, params string[] fields)
         {
             var fieldsFilter = "";
@@ -59,6 +82,13 @@ namespace Dal.Audit
             return _dbContext.Database.SqlQuery<AuditDataDetail>(sql);
         }
 
+        /// <summary>
+        /// Gets the audit trail by composite key.
+        /// </summary>
+        /// <param name="entityName">Name of the entity.</param>
+        /// <param name="compositeKey">The composite key.</param>
+        /// <param name="fields">The fields.</param>
+        /// <returns>IEnumerable&lt;AuditDataDetail&gt;.</returns>
         public IEnumerable<AuditDataDetail> GetAuditTrailByCompositeKey(string entityName, string compositeKey, params string[] fields)
         {
             var fieldsFilter = "";
@@ -90,6 +120,12 @@ namespace Dal.Audit
             return _dbContext.Database.SqlQuery<AuditDataDetail>(sql);
         }
 
+        /// <summary>
+        /// Gets the audit trail by composite key relation.
+        /// </summary>
+        /// <param name="entityName">Name of the entity.</param>
+        /// <param name="compositeKey">The composite key.</param>
+        /// <returns>IEnumerable&lt;AuditDataDetailRelation&gt;.</returns>
         public IEnumerable<AuditDataDetailRelation> GetAuditTrailByCompositeKeyRelation(string entityName, string compositeKey)
         {
 
@@ -102,16 +138,31 @@ namespace Dal.Audit
             return _dbContext.Database.SqlQuery<AuditDataDetailRelation>(sql);
         }
 
+        /// <summary>
+        /// Writes this instance.
+        /// </summary>
         public void Write()
         {
             _dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// write as an asynchronous operation.
+        /// </summary>
+        /// <returns>Task.</returns>
         public async Task WriteAsync()
         {
             await _dbContext.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Adds the audit.
+        /// </summary>
+        /// <param name="entry">The entry.</param>
+        /// <param name="date">The date.</param>
+        /// <param name="user">The user.</param>
+        /// <param name="config">The configuration.</param>
+        /// <param name="writeMode">The write mode.</param>
         public void AddAudit(DbEntityEntry entry, DateTime date, string user, AuditConfigurationEntry config, EntityState writeMode)
         {
 

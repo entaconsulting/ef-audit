@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Audit;
 using Dal.Audit;
 using Dal.Base;
 using Dal.Sample.Model;

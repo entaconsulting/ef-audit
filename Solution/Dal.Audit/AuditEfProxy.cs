@@ -3,25 +3,34 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 using Castle.DynamicProxy;
-using Dal.Audit;
 
-namespace Audit
+namespace Dal.Audit
 {
 
+    /// <summary>
+    /// Class AuditInterceptor.
+    /// </summary>
+    /// <seealso cref="Castle.DynamicProxy.IInterceptor" />
     public class AuditInterceptor : IInterceptor
     {
         private readonly IAuditManager _auditManager;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AuditInterceptor"/> class.
+        /// </summary>
+        /// <param name="auditManager">The audit manager.</param>
         public AuditInterceptor(IAuditManager auditManager)
         {
             _auditManager = auditManager;
 
         }
 
+        /// <summary>
+        /// Intercepts the specified invocation.
+        /// </summary>
+        /// <param name="invocation">The invocation.</param>
         public void Intercept(IInvocation invocation)
         {
             if (invocation.Method.Name == "SaveChanges")

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Audit;
 
 namespace Dal.Audit
 {
+    /// <summary>
+    /// Class AuditProfile.
+    /// </summary>
     public abstract class AuditProfile 
     {
         private const string DynamicProxyAssemblyName = "System.Data.Entity.DynamicProxies";
@@ -23,6 +25,9 @@ namespace Dal.Audit
             _isInitialized = false;
         }
 
+        /// <summary>
+        /// Configures this instance.
+        /// </summary>
         public virtual void Configure()
         {
             _isInitialized = true;
@@ -83,6 +88,10 @@ namespace Dal.Audit
 
         }
 
+        /// <summary>
+        /// Excludes the specified exclude.
+        /// </summary>
+        /// <param name="exclude">The exclude.</param>
         public void Exclude(Type exclude)
         {
             if (!_excludeTypeList.Contains(exclude))
@@ -91,6 +100,10 @@ namespace Dal.Audit
             }
         }
 
+        /// <summary>
+        /// Excludes the name space.
+        /// </summary>
+        /// <param name="ns">The ns.</param>
         public void ExcludeNameSpace(string ns)
         {
             if (!_excludeNsList.Contains(ns))
@@ -128,6 +141,11 @@ namespace Dal.Audit
 
         }
 
+        /// <summary>
+        /// Gets the configuration.
+        /// </summary>
+        /// <param name="entityType">Type of the entity.</param>
+        /// <returns>AuditConfigurationEntry.</returns>
         public AuditConfigurationEntry GetConfiguration(Type entityType)
         {
             if (!_isInitialized)
@@ -177,16 +195,30 @@ namespace Dal.Audit
             return configuration;
         }
 
+        /// <summary>
+        /// Adds the composite key.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="func">The function.</param>
         public void AddCompositeKey<T>(Func<T, string> func) where T : class
         {
             _auditList[typeof(T)].CompositeKeyFunc = (o) => func(o as T);
         }
 
+        /// <summary>
+        /// Sets the ignore if no field changed.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
         public void SetIgnoreIfNoFieldChanged<T>()
         {
             _auditList[typeof (T)].IgnoreIfNoFieldChanged = true;
         }
 
+        /// <summary>
+        /// Entities the name.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="name">The name.</param>
         public void EntityName<T>(string name)
         {
             _auditList[typeof(T)].EntityName = name;
