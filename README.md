@@ -1,11 +1,11 @@
 # ef-extensions
-Este proyecto consolida un conjunto de librerías y herramientas que implementan herramientas y patrones de uso frecuente sobre la capa de acceso a datos (DAL) de proyectos desarrollados sobre Entity Framework.
+Este proyecto consolida un conjunto de librerías y herramientas que implementan componentes y patrones de uso frecuente sobre la capa de acceso a datos (DAL) de proyectos desarrollados sobre Entity Framework.
 Se trata de código desarrollado por Enta Consulting durante sus proyectos de desarrollo sobre tecnología .Net
 
 Dal.Base
 --------
   
-Implementa los patrones Unit of Work y Repository sobre un DbContext de EF, y define las superclases que deben ser heredadas por las entidades de dominio para funcionar con esta librería.
+Implementa los patrones Unit of Work y Repository sobre un DbContext de EF, y define las superclases/interfaces que deben ser heredadas por las entidades de dominio para funcionar con esta librería.
 
 Ver [RepositoryTest.cs](https://github.com/entaconsulting/ef-extensions/blob/master/Solution/Dal.Test/RepositoryTest.cs) para ejemplos de las operaciones de Repository 
   
@@ -42,26 +42,26 @@ En [HistoryTest.cs](https://github.com/entaconsulting/ef-extensions/blob/master/
 Dal.Audit
 ---------
 
-Implementa auditoría de datos en forma no obtrusiva sobre DbContext.
+Implementa auditoría de datos sobre un DbContext de EF usando intercepciones a llamadas del mismo.
 
 El módulo se compone de 4 elementos:
 * **AuditProfile**
 
-  Configuración a través de fluent api las entidades a auditar y el nivel de detalle de cada una
+  Configuración a través de fluent api las entidades a auditar y el nivel de detalle de cada una.
 
 * **AuditProvider**
 
   Implementación el formato de persistencia de la auditoría. 
   A través de este elemento se pueden implementar diferentes formas de persistencia de auditoría, por ejemplo en base de datos, en file system, etc.
-  Actualmente existe una implementación que registra la auditoría en base de datos SQL Server, en una tabla, utilizando formato XML para registrar los detalles a nivel campo.
+  Actualmente existe una implementación que registra la auditoría en una tabla de base de datos SQL Server, utilizando formato XML para registrar los detalles a nivel campo.
   
 * **Application Context**
 
-  Implementación de métodos para obtener nombre de usuario y otros datos de context que se guardarán en la auditoría.
+  Implementación de métodos para obtener nombre de usuario y otros datos de contexto que se utilizarán como referencia en la  auditoría.
   
 * **AuditManager**
 
-  Es el elemento que concentra la configuración del módulo y expone métodos para facilitar la obtención del historial de cambios de entidades
+  Es el elemento que concentra/administra la configuración del módulo y expone métodos para facilitar la obtención del historial de cambios de entidades entre otros.
 
 
 ##### Ejemplo AuditProfile:
@@ -96,7 +96,7 @@ El módulo se compone de 4 elementos:
       //En este caso se obtienen todos los momentos de modificación del campo "Nombre", ignorando el resto de los cambios
       //si es que no se modificó dicho campo
       
-      var nameChangeHistory = _auditManager.GetFieldHistory(usuario, x=>x.Nombre);
+      var nameChangeHistory = _auditManager.GetFieldHistory(usuario, x=> x.Nombre);
 
 Ver [AuditTest.cs](https://github.com/entaconsulting/ef-extensions/blob/master/Solution/Dal.Test/AuditTest.cs) para ejemplos de casos de auditoría y lectura de historial
 
