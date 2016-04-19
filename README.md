@@ -48,14 +48,19 @@ El módulo se compone de 4 elementos:
 * AuditProfile
 
   Configuración a través de fluent api las entidades a auditar y el nivel de detalle de cada una
-  
+
 * AuditProvider
+
   Implementación el formato de persistencia de la auditoría. 
   A través de este elemento se pueden implementar diferentes formas de persistencia de auditoría, por ejemplo en base de datos, en file system, etc.
   Actualmente existe una implementación que registra la auditoría en base de datos SQL Server, en una tabla, utilizando formato XML para registrar los detalles a nivel campo.
+  
 * Application Context
+
   Implementación de métodos para obtener nombre de usuario y otros datos de context que se guardarán en la auditoría.
+  
 * AuditManager
+
   Es el elemento que concentra la configuración del módulo y expone métodos para facilitar la obtención del historial de cambios de entidades
 
 
