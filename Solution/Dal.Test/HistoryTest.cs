@@ -42,10 +42,10 @@ namespace Dal.Test
             _uow.SaveChanges();
 
             var hoy = DateTime.Today;
-            var estado = usuario.GenerarVersion(u => u.Estados, hoy, _uow);
+            var estado = usuario.CreateVersion(u => u.Estados, hoy, _uow);
 
             Assert.AreEqual(hoy, estado.VigenciaDesde);
-            Assert.AreEqual(HistoryExtensions.VigenciaMaxima, estado.VigenciaHasta);
+            Assert.AreEqual(HistoryExtensions.MaxDate, estado.VigenciaHasta);
         }
         [Test]
         public async Task CrearNuevaVersionSobreLaVigente()
@@ -55,12 +55,12 @@ namespace Dal.Test
             _uow.SaveChanges();
 
             var hoy = DateTime.Today;
-            var estadoHoy = usuario.GenerarVersion(u => u.Estados, hoy, _uow);
+            var estadoHoy = usuario.CreateVersion(u => u.Estados, hoy, _uow);
             estadoHoy.Habilitado = true;
             await _uow.SaveChangesAsync();
 
             var manana = hoy.AddDays(1);
-            var estadoManana = usuario.GenerarVersion(u => u.Estados, manana, _uow);
+            var estadoManana = usuario.CreateVersion(u => u.Estados, manana, _uow);
             estadoManana.Habilitado = false;
             await _uow.SaveChangesAsync();
 
@@ -68,7 +68,7 @@ namespace Dal.Test
             Assert.AreEqual(hoy, estadoHoy.VigenciaHasta);
 
             Assert.AreEqual(manana, estadoManana.VigenciaDesde);
-            Assert.AreEqual(HistoryExtensions.VigenciaMaxima, estadoManana.VigenciaHasta);
+            Assert.AreEqual(HistoryExtensions.MaxDate, estadoManana.VigenciaHasta);
         }
         [Test]
         public async Task CrearNuevaVersionSobreUnaNoVigente()
@@ -78,17 +78,17 @@ namespace Dal.Test
             _uow.SaveChanges();
 
             var hoy = DateTime.Today;
-            var estadoHoy = usuario.GenerarVersion(u => u.Estados, hoy, _uow);
+            var estadoHoy = usuario.CreateVersion(u => u.Estados, hoy, _uow);
             estadoHoy.Habilitado = true;
             await _uow.SaveChangesAsync();
 
             var futuro = hoy.AddMonths(1);
-            var estadoFuturo = usuario.GenerarVersion(u => u.Estados, futuro, _uow);
+            var estadoFuturo = usuario.CreateVersion(u => u.Estados, futuro, _uow);
             estadoFuturo.Habilitado = true;
             await _uow.SaveChangesAsync();
 
             var entreHoyYFuturo = hoy.AddDays(15);
-            var estadoIntermedio = usuario.GenerarVersion(u => u.Estados, entreHoyYFuturo, _uow);
+            var estadoIntermedio = usuario.CreateVersion(u => u.Estados, entreHoyYFuturo, _uow);
             estadoIntermedio.Habilitado = false;
             await _uow.SaveChangesAsync();
 
@@ -99,7 +99,7 @@ namespace Dal.Test
             Assert.AreEqual(futuro.AddDays(-1), estadoIntermedio.VigenciaHasta);
 
             Assert.AreEqual(futuro, estadoFuturo.VigenciaDesde);
-            Assert.AreEqual(HistoryExtensions.VigenciaMaxima, estadoFuturo.VigenciaHasta);
+            Assert.AreEqual(HistoryExtensions.MaxDate, estadoFuturo.VigenciaHasta);
         }
 
         [Test]
@@ -109,7 +109,7 @@ namespace Dal.Test
             var usuario = await GenerarUsuarioConHistoria(hoy);
 
             var ayer = hoy.AddDays(-1);
-            var estadoAyer = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(ayer, _uow);
+            var estadoAyer = usuario.GetVersion<Usuario, UsuarioEstadoHistory>(ayer, _uow);
 
             Assert.Null(estadoAyer);
 
@@ -121,7 +121,7 @@ namespace Dal.Test
             var hoy = DateTime.Today;
             var usuario = await GenerarUsuarioConHistoria(hoy);
 
-            var estadoHoy = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(hoy, _uow);
+            var estadoHoy = usuario.GetVersion<Usuario, UsuarioEstadoHistory>(hoy, _uow);
 
             Assert.AreEqual(hoy, estadoHoy.VigenciaDesde);
 
@@ -135,7 +135,7 @@ namespace Dal.Test
 
             //inicia 15 días después de hoy, pido 20 días pero me tiene que venir la versión que inicia en 15
             var vigenciaIntermedia = hoy.AddDays(20);
-            var estado = usuario.ObtenerVersion<Usuario, UsuarioEstadoHistory>(vigenciaIntermedia, _uow);
+            var estado = usuario.GetVersion<Usuario, UsuarioEstadoHistory>(vigenciaIntermedia, _uow);
 
             Assert.AreEqual(hoy.AddDays(15), estado.VigenciaDesde);
 
@@ -147,17 +147,17 @@ namespace Dal.Test
             _rUsuarios.Add(usuario);
             _uow.SaveChanges();
 
-            var estadoHoy = usuario.GenerarVersion(u => u.Estados, hoy, _uow);
+            var estadoHoy = usuario.CreateVersion(u => u.Estados, hoy, _uow);
             estadoHoy.Habilitado = true;
             await _uow.SaveChangesAsync();
 
             var futuro = hoy.AddMonths(1);
-            var estadoFuturo = usuario.GenerarVersion(u => u.Estados, futuro, _uow);
+            var estadoFuturo = usuario.CreateVersion(u => u.Estados, futuro, _uow);
             estadoFuturo.Habilitado = true;
             await _uow.SaveChangesAsync();
 
             var entreHoyYFuturo = hoy.AddDays(15);
-            var estadoIntermedio = usuario.GenerarVersion(u => u.Estados, entreHoyYFuturo, _uow);
+            var estadoIntermedio = usuario.CreateVersion(u => u.Estados, entreHoyYFuturo, _uow);
             estadoIntermedio.Habilitado = false;
             await _uow.SaveChangesAsync();
 

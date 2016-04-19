@@ -12,21 +12,21 @@ namespace Dal.History
 {
     public static class HistoryExtensions
     {
-        public static readonly DateTime VigenciaMaxima = new DateTime(2100, 12, 31);
+        public static readonly DateTime MaxDate = new DateTime(2100, 12, 31);
 
-        public static IEnumerable<T> FiltroVigente<T>(this IEnumerable<T> query, DateTime fechaVersion) where T : EntidadBaseHistoria
+        public static IEnumerable<T> EffectiveAt<T>(this IEnumerable<T> query, DateTime fechaVersion) where T : EntityVersion
         {
-            return query.FiltroVigenteEnPeriodo(fechaVersion, fechaVersion);
+            return query.EffectiveBetween(fechaVersion, fechaVersion);
         }
-        public static IQueryable<T> FiltroVigente<T>(this IQueryable<T> query, DateTime fechaVersion) where T : EntidadBaseHistoria
+        public static IQueryable<T> EffectiveAt<T>(this IQueryable<T> query, DateTime fechaVersion) where T : EntityVersion
         {
-            return query.FiltroVigenteEnPeriodo(fechaVersion, fechaVersion);
+            return query.EffectiveBetween(fechaVersion, fechaVersion);
         }
-        public static IEnumerable<T> FiltroVigenteEnPeriodo<T>(this IEnumerable<T> query, DateTime fechaDesde, DateTime fechaHasta) where T : EntidadBaseHistoria
+        public static IEnumerable<T> EffectiveBetween<T>(this IEnumerable<T> query, DateTime fechaDesde, DateTime fechaHasta) where T : EntityVersion
         {
             return query.Where(r => r.VigenciaDesde <= fechaHasta && r.VigenciaHasta >= fechaDesde);
         }
-        public static IQueryable<T> FiltroVigenteEnPeriodo<T>(this IQueryable<T> query, DateTime fechaDesde, DateTime fechaHasta) where T : EntidadBaseHistoria
+        public static IQueryable<T> EffectiveBetween<T>(this IQueryable<T> query, DateTime fechaDesde, DateTime fechaHasta) where T : EntityVersion
         {
             return query.Where(r => r.VigenciaDesde <= fechaHasta && r.VigenciaHasta >= fechaDesde);
         }
@@ -39,19 +39,19 @@ namespace Dal.History
         /// <param name="query"></param>
         /// <param name="condicion"></param>
         /// <returns></returns>
-        public static IQueryable<T> CompararConAnterior<T>(this IQueryable<T> query, Expression<Func<TuplaHistorica<T>,bool>> condicion ) where T : EntidadBaseHistoriaAtributos
+        public static IQueryable<T> CompareWithPrevious<T>(this IQueryable<T> query, Expression<Func<VersionTuple<T>,bool>> condicion ) where T : EntityVersionSetItem
         {
             //agrego a la condicion el hecho de que la anterior puede no existir en cuyo caso considero a la actual como que es un cambio (porque es la primera)
-            Expression<Func<TuplaHistorica<T>,bool>> condEsNull = (t) => t.Referido == null;
+            Expression<Func<VersionTuple<T>,bool>> condEsNull = (t) => t.Referido == null;
             var condCompuesta = condicion.OrElse(condEsNull);
 
             var result = query
                 .GroupJoin(query
-                    , actual => new {actual.IdPadre, Fecha = actual.VigenciaDesde}
+                    , actual => new {IdPadre = actual.VersionSetId, Fecha = actual.VigenciaDesde}
                     , anterior =>
-                        new {anterior.IdPadre, Fecha = SqlFunctions.DateAdd("d", 1, anterior.VigenciaHasta).Value}
+                        new {IdPadre = anterior.VersionSetId, Fecha = SqlFunctions.DateAdd("d", 1, anterior.VigenciaHasta).Value}
                     , (actual, anteriores) =>
-                        new TuplaHistorica<T> {Actual = actual, Referido = anteriores.FirstOrDefault()})
+                        new VersionTuple<T> {Actual = actual, Referido = anteriores.FirstOrDefault()})
                 .Where(condCompuesta)
                 .Select(t => t.Actual);
             
@@ -59,50 +59,50 @@ namespace Dal.History
         }
 
 
-        public class TuplaHistorica<T>
+        public class VersionTuple<T>
         {
             public T Actual { get; set; }
             public T Referido { get; set; }
         }
 
-        public static TV ObtenerVersion<T, TV>(this T entidad, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
+        public static TV GetVersion<T, TV>(this T entidad, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
             where T : EntityBase
-            where TV : EntidadBaseHistoriaAtributos
+            where TV : EntityVersionSetItem
         {
-            return ObtenerVersion(entidad.Id, fechaVersion, uowAUsar, includes).FirstOrDefault();
+            return GetVersion(entidad.Id, fechaVersion, uowAUsar, includes).FirstOrDefault();
         }
 
-        public static TV GetVersionDefault<T, TV>(this T entidad, DateTime fechaVersion)
+        public static TV GetDefaultVersion<T, TV>(this T entidad, DateTime fechaVersion)
             where T : EntityBase
-            where TV : EntidadBaseHistoriaAtributos, new()
+            where TV : EntityVersionSetItem, new()
         {
             return new TV()
             {
                 VigenciaDesde = fechaVersion,
                 VigenciaHasta = new DateTime(2100,12,31),
-                IdPadre = entidad.Id
+                VersionSetId = entidad.Id
             };
         }
 
 
 
-        public static TV GetVersionDefault<TV>(this int entidadId, DateTime fechaVersion)
-            where TV : EntidadBaseHistoriaAtributos, new()
+        public static TV GetDefaultVersion<TV>(this int entidadId, DateTime fechaVersion)
+            where TV : EntityVersionSetItem, new()
         {
             return new TV()
             {
                 VigenciaDesde = fechaVersion,
-                VigenciaHasta = VigenciaMaxima,
-                IdPadre = entidadId
+                VigenciaHasta = MaxDate,
+                VersionSetId = entidadId
             };
         }
 
 
-        public static IQueryable<TV> ObtenerVersion<TV>(this int entidadId, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
-            where TV : EntidadBaseHistoriaAtributos
+        public static IQueryable<TV> GetVersion<TV>(this int entidadId, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
+            where TV : EntityVersionSetItem
         {
-            var query = uowAUsar.GetRepository<TV>().Query().Where(ev => ev.IdPadre == entidadId)
-                .FiltroVigente(fechaVersion);
+            var query = uowAUsar.GetRepository<TV>().Query().Where(ev => ev.VersionSetId == entidadId)
+                .EffectiveAt(fechaVersion);
 
             if (includes != null)
                 query = includes.Aggregate(query, (current, include) => current.Include(include));
@@ -114,20 +114,20 @@ namespace Dal.History
 
 
 
-        public static IQueryable<TV> ObtenerVersion<T, TV>(this IEnumerable<T> entidades, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
+        public static IQueryable<TV> GetVersion<T, TV>(this IEnumerable<T> entidades, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
             where T : EntityBase
-            where TV : EntidadBaseHistoriaAtributos
+            where TV : EntityVersionSetItem
         {
             var idsPadre = entidades.Select(e => e.Id);
-            return idsPadre.ObtenerVersion(fechaVersion, uowAUsar, includes);
+            return idsPadre.GetVersion(fechaVersion, uowAUsar, includes);
         }
 
-        public static IQueryable<TV> ObtenerVersion<TV>(this IEnumerable<int> entidadesIds, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
-            where TV : EntidadBaseHistoriaAtributos
+        public static IQueryable<TV> GetVersion<TV>(this IEnumerable<int> entidadesIds, DateTime fechaVersion, IUoW uowAUsar, params Expression<Func<TV, object>>[] includes)
+            where TV : EntityVersionSetItem
         {
 
-            var query = uowAUsar.GetRepository<TV>().Query().FiltroVigente(fechaVersion)
-                .Where(ev => entidadesIds.Contains(ev.IdPadre));
+            var query = uowAUsar.GetRepository<TV>().Query().EffectiveAt(fechaVersion)
+                .Where(ev => entidadesIds.Contains(ev.VersionSetId));
 
 
             if (includes != null)
@@ -136,17 +136,17 @@ namespace Dal.History
             return query;
         }
 
-        public static TV GenerarVersion<TV>(this int entidadId,DateTime fecha, IUoW uowAUsar, TV objetoHistoriaBase = null, bool forzarNuevaEntidad=false, bool agregarAlRepositorio = true)where TV : EntidadBaseHistoriaAtributos, new()
+        public static TV CreateVersion<TV>(this int entidadId,DateTime fecha, IUoW uowAUsar, TV objetoHistoriaBase = null, bool forzarNuevaEntidad=false, bool agregarAlRepositorio = true)where TV : EntityVersionSetItem, new()
         {
             var repositorioVersion = uowAUsar.GetRepository<TV>();
             //obtengo la versión vigente
-            var versionVigente = entidadId.ObtenerVersion<TV>(fecha, uowAUsar).FirstOrDefault();
+            var versionVigente = entidadId.GetVersion<TV>(fecha, uowAUsar).FirstOrDefault();
             if (versionVigente != null && versionVigente.VigenciaDesde == fecha && !forzarNuevaEntidad)
                 //si la fecha desde es igual que la versión vigente no se genera una nueva sino que se trabaja sobre la misma
                 return versionVigente;
 
             //genero la nueva versión
-            var versionNueva = objetoHistoriaBase ?? new TV() {IdPadre = entidadId};
+            var versionNueva = objetoHistoriaBase ?? new TV() {VersionSetId = entidadId};
             versionNueva.VigenciaDesde = fecha;
 
             //actualizo campos de versionado
@@ -162,15 +162,15 @@ namespace Dal.History
             {
                 //busco si tengo una versión posterior para tomar la vigencia hasta, si no es el maximo
                 var versionPosterior = repositorioVersion.Query()
-                    .Where(v =>  v.IdPadre == entidadId && v.VigenciaDesde > fecha)
+                    .Where(v =>  v.VersionSetId == entidadId && v.VigenciaDesde > fecha)
                     .OrderBy(v => v.VigenciaDesde)
                     .FirstOrDefault();
                 versionNueva.VigenciaHasta = versionPosterior != null
                     ? versionPosterior.VigenciaDesde.AddDays(-1)
-                    : VigenciaMaxima;
+                    : MaxDate;
             }
 
-            versionNueva.IdPadre = entidadId;
+            versionNueva.VersionSetId = entidadId;
 
             if (agregarAlRepositorio)
             {
@@ -180,15 +180,15 @@ namespace Dal.History
             return versionNueva;
 
         }
-        public static TV GenerarVersion<T, TV>(this T entidad, Expression<Func<T, ICollection<TV>>> propiedadVersion, DateTime fecha, IUoW uowAUsar)
+        public static TV CreateVersion<T, TV>(this T entidad, Expression<Func<T, ICollection<TV>>> propiedadVersion, DateTime fecha, IUoW uowAUsar)
             where T : EntityBase
-            where TV : EntidadBaseHistoriaAtributos, new()
+            where TV : EntityVersionSetItem, new()
         {
-            var versionNueva = entidad.Id.GenerarVersion<TV>(fecha, uowAUsar);
+            var versionNueva = entidad.Id.CreateVersion<TV>(fecha, uowAUsar);
             return versionNueva;
         }
-        public static T ReemplazarVersion<T>(this T versionVigente, DateTime fecha, IUoW uowAUsar)
-            where T : EntidadBaseHistoria, new()
+        public static T ReplaceVersion<T>(this T versionVigente, DateTime fecha, IUoW uowAUsar)
+            where T : EntityVersion, new()
         {
 
             var repositorio = uowAUsar.GetRepository<T>();
@@ -210,17 +210,17 @@ namespace Dal.History
 
             return versionNueva;
         }
-        public static void EliminarVersion<T>(this T versionVigente, IUoW uowAUsar)
-            where T : EntidadBaseHistoriaAtributos, new()
+        public static void DeleteVersion<T>(this T versionVigente, IUoW uowAUsar)
+            where T : EntityVersionSetItem, new()
         {
 
             var repositorio = uowAUsar.GetRepository<T>();
 
             //busco las versiones anterior y posterior a la vigente
-            var versionAnterior = repositorio.Query().Where(v => v.IdPadre == versionVigente.IdPadre && v.VigenciaHasta < versionVigente.VigenciaDesde)
+            var versionAnterior = repositorio.Query().Where(v => v.VersionSetId == versionVigente.VersionSetId && v.VigenciaHasta < versionVigente.VigenciaDesde)
                 .OrderByDescending(v => v.VigenciaHasta)
                 .FirstOrDefault();
-            var versionPosterior = repositorio.Query().Where(v => v.IdPadre == versionVigente.IdPadre && v.VigenciaDesde > versionVigente.VigenciaHasta)
+            var versionPosterior = repositorio.Query().Where(v => v.VersionSetId == versionVigente.VersionSetId && v.VigenciaDesde > versionVigente.VigenciaHasta)
                 .OrderBy(v => v.VigenciaDesde)
                 .FirstOrDefault();
 
@@ -229,7 +229,7 @@ namespace Dal.History
             {
                 versionAnterior.VigenciaHasta = versionPosterior != null
                     ? versionPosterior.VigenciaDesde.AddDays(-1)
-                    : VigenciaMaxima;
+                    : MaxDate;
 
                 repositorio.Update(versionAnterior);
             }
@@ -238,8 +238,8 @@ namespace Dal.History
             repositorio.Delete(versionVigente);
 
         }
-        public static void ModificarVigencia<T>(this T versionVigente, DateTime fecha, IUoW uowAUsar)
-            where T : EntidadBaseHistoria, new()
+        public static void UpdateEffectiveTo<T>(this T versionVigente, DateTime fecha, IUoW uowAUsar)
+            where T : EntityVersion, new()
         {
 
             var repositorio = uowAUsar.GetRepository<T>();
@@ -250,37 +250,13 @@ namespace Dal.History
             repositorio.Update(versionVigente);
         }
 
-        public static T CrearVersion<T>(DateTime fecha, IUoW uowAUsar)
-            where T : EntidadBaseHistoria, new()
-        {
-
-            var repositorio = uowAUsar.GetRepository<T>();
-            var versionNueva = new T { VigenciaDesde = fecha, VigenciaHasta = VigenciaMaxima };
-            repositorio.Add(versionNueva);
-
-            return versionNueva;
-        }
-
-        public static T CrearVersion<T>(this T versionNueva,DateTime fecha, IUoW uowAUsar)
-            where T : EntidadBaseHistoria, new()
-        {
-
-            var repositorio = uowAUsar.GetRepository<T>();
-            versionNueva.VigenciaDesde = fecha;
-            versionNueva.VigenciaHasta = VigenciaMaxima;
-            repositorio.Add(versionNueva);
-
-            return versionNueva;
-        }
-        
-
         public static T GetVersionDefaultBase<T>(this T entidad, DateTime fechaVersion)
-            where T : EntidadBaseHistoria, new()
+            where T : EntityVersion, new()
         {
             return new T()
             {
                 VigenciaDesde = fechaVersion,
-                VigenciaHasta = VigenciaMaxima,
+                VigenciaHasta = MaxDate,
                 Id = entidad.Id
             };
         }

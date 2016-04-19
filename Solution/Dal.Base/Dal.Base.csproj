@@ -49,8 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntidadBaseHistoria.cs" />
-    <Compile Include="EntidadBaseHistoriaAtributos.cs" />
+    <Compile Include="EntityVersion.cs" />
+    <Compile Include="EntityVersionSetItem.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryFactory.cs" />

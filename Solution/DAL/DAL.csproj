@@ -61,9 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContext.cs" />
     <Compile Include="AuditCustomProfile.cs" />
-    <Compile Include="ContextDb.cs" />
+    <Compile Include="SampleDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
